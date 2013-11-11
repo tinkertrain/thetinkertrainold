@@ -1,0 +1,13 @@
+### SublimeText ###
+# SublimeText project files
+*.sublime-workspace
+
+### Compass ###
+.sass-cache
+
+### SASS ###
+### SASS Ignores - "Sassy CSS" http://sass-lang.com/
+*.sass-cache
+
+### CodeKit ###
+*/codekit-config.json
