@@ -1,0 +1,230 @@
+.blog-night {
+  background: darken($darkbrown, 10%) !important;
+  h2, a, p, li {
+    color: darken($lightbrown, 20%) !important;
+  }
+  h2 a {
+    text-shadow: 1px -1px 0 darken($darkbrown, 40%);
+    &:hover {
+      text-shadow: 1px -1px 0 darken($darkbrown, 40%);
+    }
+  }
+  .mrtinker-blog {
+    background: transparent url("../images/mrtinker-dark.svg") 0 0 no-repeat !important;
+  }
+  button {
+    box-shadow: inset 1px 1px 2px rgba(white, 0.2), inset -1px -1px 2px rgba($darkbrown, 0.5) !important;
+    &:hover {
+      background-color: $darkbrown !important;
+    }
+    &:after {
+      background-color: $lightbrown !important;
+      color: $darkbrown !important;
+      box-shadow: inset 1px 1px 2px rgba($darkbrown, 0.7) !important;
+    }
+    &:active {
+      background-color: darken($brown, 40%) !important;
+      box-shadow: inset 2px 2px 2px black;
+    }
+  }
+  .day {
+    background-color: darken($brown, 20%) !important;
+    &:before {
+      content: "\e001" !important;
+      font-family: 'mr-tinker';
+      color: $lightbrown !important;
+      font-size: 15px !important;
+    }
+  }
+  .serif {
+    color: $lightbrown !important;
+    background-color: darken($brown, 20%) !important;
+  }
+}
+
+.blog-sans {
+  .serif {
+    font-family: 'Open Sans', sans-serif !important;
+  }
+  article {
+    * {
+      font-family: 'Open Sans', sans-serif !important;
+    }
+  }
+}
+
+.page-blog {
+  padding-bottom: 60px;
+  .mrtinker-blog {
+    margin: 60px auto;
+    position: relative;
+    left: 25px;
+    background: transparent url("../images/mrtinker.svg") 0 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 144px;
+    height: 87px;
+  }
+  .switcher {
+    margin-top: 50px;
+  }
+  button {
+    box-shadow: inset 1px 1px 2px rgba(white, 0.8), inset -1px -1px 2px rgba($brown, 0.5), 1px 1px 2px rgba($darkbrown, 0.3);
+    background-color: $lightbrown;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 28px;
+    height: 27px;
+    @include transition(0.2s);
+    position: relative;
+    &:hover {
+      box-shadow: inset 1px 1px 2px rgba(white, 0.2), inset -1px -1px 2px rgba($darkbrown, 0.5);
+      background-color: darken($lightbrown, 10%);
+    }
+    &:active {
+      background-color: darken($brown, 30%);
+      box-shadow: inset 2px 2px 2px black;
+    }
+    &:after {
+      position: absolute;
+      opacity: 0;
+      @include transition(0.5s);
+    }
+    &:after {
+      font-size: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+      background-color: $darkbrown;
+      color: $lightbrown;
+      border-radius: 3px;
+      box-shadow: inset 1px 1px 2px rgba($lightbrown, 0.2);
+      border: 1px solid $darkbrown;
+      padding: 3px 5px;
+      width: 85px;
+      height: 15px;
+      line-height: 15px;
+      z-index: 10;
+      top: 30px;
+      margin-left: -50px;
+    }
+    &:hover:after, &:hover:before {
+      opacity: 1;
+    }
+  }
+  .day {
+    text-align: center;
+    border: 1px solid $darkbrown;
+    border-radius: 3px 0 0 3px;
+    margin-right: -5px;
+    @include ir;
+    &:hover {
+      @include ir;
+      &:before {
+        text-shadow: none;
+      }
+    }
+    &:after {
+      content: "Toggle Day/Night";
+    }
+    &:before {
+      content: "\e002";
+      font-family: 'mr-tinker';
+      font-size: 16px;
+      color: $darkbrown;
+      width: 28px;
+      height: 27px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -14px;
+    }
+  }
+  .night {
+    background: transparent url("../images/moon.svg") 50% no-repeat;
+  }
+  .serif {
+    border-top: 1px solid $darkbrown;
+    border-bottom: 1px solid $darkbrown;
+    border-right: 1px solid $darkbrown;
+    border-radius: 0 3px 3px 0;
+    font-family: $kreon, serif;
+    font-weight: bold;
+    &:after {
+      content: "Toggle Serif/Sans";
+    }
+  }
+  .sans {
+    font-family: 'Open sans', sans-serif;
+  }
+}
+
+article {
+  margin-bottom: 60px;
+  h2 {
+    text-align: center;
+    margin: 0;
+    a {
+      font-size: 42px;
+      color: $darkbrown;
+      vertical-align: bottom;
+      text-shadow: -1px -1px 0 white;
+      position: relative;
+      &:hover {
+        text-shadow: 1px -1px 0 white;
+        color: $darkbrown;
+        img {
+          filter: grayscale(0%);
+          -webkit-filter: grayscale(0%);
+          -moz-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+      }
+    }
+    img {
+      position: absolute;
+      left: -60px;
+      top: 8px;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      filter: grayscale(100%);
+      height: 38px;
+    }
+  }
+  .date {
+    font-size: 14px;
+    color: $darkbrown;
+    font-weight: 300;
+  }
+}
+
+.portfolio-link {
+  a {
+    color: $lightbrown;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 24px;
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    border: 1px solid $darkbrown;
+    border-radius: 3px;
+    text-align: center;
+     background-color: rgb(154,63,55);
+      @include filter-gradient(#9a3f37, #625954, horizontal);
+      @include background-image(linear-gradient(left,  rgba(154,63,55,1) 0%,rgba(154,63,55,1) 25%,rgba(59,134,90,1) 25%,rgba(59,134,90,1) 50%,rgba(58,87,122,1) 50%,rgba(58,87,122,1) 75%,rgba(98,89,84,1) 75%,rgba(98,89,84,1) 100%));
+    @include transition(0.7s);
+    opacity: 0.3;
+    &:hover {
+			opacity: 1;
+			text-shadow: none;
+    }
+    &:active {
+			opacity: 1;
+    }
+  }
+}

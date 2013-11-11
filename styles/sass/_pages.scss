@@ -1,0 +1,375 @@
+.page-services{
+  h2{
+    font-family: $kreon;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $blue;
+    position: relative;
+    border-bottom: 1px dashed rgba($blue, 0.5);
+    padding-bottom: 5px;
+  }
+  .toolbox{
+    margin-bottom: 60px;
+  }
+}
+
+img[src*="toolbox"]{
+  display: block;
+  margin: 30px auto;
+}
+
+.page-about{
+  .about-wb{
+    margin-bottom: 60px;
+  }
+  .alert{
+    font-size: 18px;
+    background-color: rgba(#fcf8e3, 0.3);
+    padding: 5px 0 5px 10px;
+    &:before{
+      margin-right: 10px;
+    }
+  }
+  ul{
+    margin-bottom: 80px;
+    li{
+      margin-bottom: 1em;
+    }
+  }
+  nav{
+    ul{
+      margin: 0;
+      li{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .icon-file-pdf{
+    &:before{
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+img[src*="folder"]{
+  display: block;
+  margin: 20px auto 20px;
+}
+
+////////contact
+.contact-link{
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  &:before{
+    margin-right: 10px;
+    color: darken($sepia, 10%);
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+form{
+  position: relative;
+  margin: 50px 0 100px;
+}
+.tinkertrain-servicing{
+  position: absolute;
+  top: 180px;
+  left: 360px;
+  z-index: 10;
+}
+.control-group{
+  z-index: 12;
+  position: relative;
+}
+.input-message{
+  background:transparent image-url('/site/templates/images/tinkertrain-services.png') 93% 80px no-repeat;
+  padding-bottom: 120px;
+}
+label, input, textarea, button{
+  font-family: $kreon;
+  font-size: 20px !important;
+  font-weight: 300;
+}
+input, textarea{
+  border-color: $blue !important;
+}
+.form-actions{
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  margin-top: -120px;
+  position: relative;
+  z-index: 100;
+}
+.icon-paperplane{
+  color: $lightbrown;
+  position: relative;
+  &:before{
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    left: 6px;
+  }
+}
+input[type='submit']{
+  background-color: $blue;
+  border: 1px solid $sepia;
+  padding: 5px 10px 5px 30px;
+  width: 80px;
+  display: block;
+  color: $lightbrown;
+  border: 0;
+  &:hover{
+    background-color: darken($blue, 10%);
+  }
+}
+.success{
+  background-color: rgba($green, 0.5);
+  text-align: center;
+  color: darken($green, 20%);
+  padding: 5px 0;
+}
+.error, .parsley-error-list li{
+  font-size: 16px;
+  font-family: $kreon;
+  font-weight: 400;
+  color: $red;
+  text-align: right;
+  &:before{
+    font-family: $thetinker-set;
+    margin-right: 10px;
+  }
+
+}
+.parsley-error.parsley-validated{
+  border-color: $red !important;
+}
+.parsley-error-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li{
+    background-color: rgba(lighten($red, 40%), 0.8);
+    @include border-radius(5px);
+    padding-right: 10px;
+    margin-top: 5px;
+  }
+}
+.parsley-validated.parsley-success{
+  border-color: $green !important;
+}
+
+///////Work
+.page-work{
+  .blurb{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.train-line{
+  position: relative;
+  overflow: hidden;
+  padding-top: 25px;
+  background:transparent image-url('/site/templates/images/ground-line.png') 0 310px repeat-x;
+  .previous, .next{
+    @include ir;
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent $red transparent transparent;
+    position: absolute;
+    top: 40px;
+    z-index: 500;
+  }
+  .previous{
+    border-width: 50px 30px 50px 0;
+    &:hover{
+      border-color: transparent rgba($red, 0.7) transparent transparent;
+    }
+  }
+  .next{
+    border-width: 50px 0 50px 30px;
+    border-color: transparent transparent transparent $red;
+    right: 0;
+    &:hover{
+      border-color: transparent transparent transparent rgba($red, 0.7);
+    }
+  }
+}
+
+.past-projects{
+  position: relative;
+  height: 380px;
+  list-style: none;
+  margin: 0 0 90px 0;
+  padding: 0 ;
+  width: 5000px;
+
+  li{
+    float: left;
+    width: 340px;
+    margin-bottom: 150px;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      width: 369px;
+      height: 148px;
+      top: 160px;
+      left: 0px;
+      background:transparent image-url('/site/templates/images/wagon-fullwidth.png') no-repeat;
+    }
+  }
+  .project-logo, .end-of-line{
+    position: relative;
+    width: 175px;
+    height: 205px;
+    margin: 0 auto;
+    top: 0px;
+    background-color: #fffdf0;
+    @include sheet;
+    img{
+      display: block;
+      margin: 50px auto;
+      opacity: .75;
+    }
+
+  }
+  .end-of-line{
+    p{
+      @include transform(rotate(-45deg));
+      font-size: 30px;
+      color: $sepia;
+      position: relative;
+      top: 40px;
+      text-align: center;
+      line-height: 40px;
+      margin: 20px auto 0;
+    }
+  }
+  .project-logo{
+    cursor: pointer;
+  }
+}
+.project-details{
+    display: none;
+    @include sheet;
+    position: absolute;
+    padding: 30px;
+    //min-height:  400px;
+    width: 300px;
+    top: -400px;
+    left:50%;
+    margin-left: -150px;
+    z-index: 500;
+    @include box-shadow( 2px 2px 10px rgba($darkbrown, 0.3));
+    p{
+      font-size: 18px;
+      line-height: 1.5em;
+      span{
+        color: $green;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      span+span{
+        color: $sepia;
+      }
+    }
+    .project-links{
+      margin: 20px auto 0;
+      width: 250px;
+    }
+    a{
+      color: $lightbrown;
+      font-family: $kreon;
+      font-size: 18px;
+      background-color: $sepia;
+      display: inline-block;
+      padding: 5px 10px 5px 10px;
+      text-align: center;
+      width: 100px;
+      &[href*="http"]{
+        background-color: $blue;
+        &:hover{
+          background-color: darken($blue, 10%);
+        }
+      }
+      &:before{
+        margin-right: 5px;
+        margin-top: 3px;
+        font-size: 16px;
+      }
+      &:hover{
+        text-decoration: none;
+        background-color: darken($sepia, 10%);
+        text-shadow: none;
+      }
+    }
+  }
+
+//////////--------Media Queries --------/////////////
+@media (max-width:980px){
+  .page-services{
+    h2{
+      font-size: 30px;
+    }
+    .row .span4:nth-child(3) h2, .row .span4:nth-child(1) h2{
+      padding-top: 40px;
+    }
+    .toolbox{
+      margin-bottom: 80px;
+    }
+  }
+}
+///////phone
+@media (max-width:767px){
+  .page-services, .page-about, .page-contact, .page-work{
+    h1{
+      font-size: 34px;
+      padding: 5px 0 0 0;
+    }
+    h2{
+      // margin: 50px 0 30px;
+      font-size: 30px;
+    }
+    .row .span4:nth-child(3) h2, .row .span4:nth-child(1) h2{
+      padding-top: 0px;
+    }
+  .input-message{
+    background:transparent image-url('/site/templates/images/tinkertrain-services.png') 100% 85px no-repeat;
+    padding-bottom: 120px;
+      }
+    }
+    .project-details{
+      min-height:  300px;
+      width: 250px;
+      top: 80px;
+    }
+}
+
+@media (max-width:481px){
+  .page-contact{
+    .input-message{
+  background:transparent image-url('/site/templates/images/tinkertrain-services.png') 100% 110px no-repeat;
+  padding-bottom: 120px;
+    }
+  }
+}
+
+///////small phone
+@media (max-width: 400px){
+  .page-services, .page-about, .page-contact, .page-work{
+    h1{
+      margin: 30px 0;
+    }
+  .input-message{
+  background:transparent image-url('/site/templates/images/tinkertrain-services.png') 100% 110px no-repeat;
+  padding-bottom: 120px;
+    }
+  }
+}
+

@@ -1,0 +1,35 @@
+/////////////////// Import fonts
+
+//Haymaker
+
+@font-face {
+    font-family: 'haymakerregular';
+    src: url('../fonts/haymaker-webfont.eot');
+    src: url('../fonts/haymaker-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/haymaker-webfont.woff') format('woff'),
+         url('../fonts/haymaker-webfont.ttf') format('truetype'),
+         url('../fonts/haymaker-webfont.svg#haymakerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);
+
+//thetinker-set (icons)
+
+@font-face {
+  font-family: 'mr-tinker';
+  src: url('../fonts/mr-tinker.eot');
+  src: url('../fonts/mr-tinker.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/mr-tinker.woff') format('woff'),
+       url('../fonts/mr-tinker.ttf') format('truetype'),
+       url('../fonts/mr-tinker.svg#mr-tinker') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+///////////////// Set variables
+
+$haymaker: 'haymakerregular', georgia, serif;
+$kreon: 'Kreon', georgia, serif;
+$thetinker-set: 'mr-tinker';

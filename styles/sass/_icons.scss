@@ -1,0 +1,72 @@
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'mr-tinker';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-moon-fill, .icon-sun-stroke, .icon-exit, .icon-new-tab, .icon-warning, .icon-home, .icon-envelope, .icon-twitter, .icon-linkedin-sign, .icon-paperplane, .icon-file-pdf {
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-moon-fill:before {
+  content: "\e001";
+  font-family: 'mr-tinker';
+}
+.icon-sun-stroke:before {
+  content: "\e002";
+  font-family: 'mr-tinker';
+}
+.icon-exit:before {
+  content: "\e000";
+  font-family: 'mr-tinker';
+}
+.icon-new-tab:before {
+  content: "\e003";
+  font-family: 'mr-tinker';
+}
+.icon-warning:before {
+  content: "\e005";
+  font-family: 'mr-tinker';
+}
+.icon-home:before {
+  content: "\e007";
+  font-family: 'mr-tinker';
+}
+.icon-envelope:before {
+  content: "\f003";
+  font-family: 'mr-tinker';
+}
+.icon-twitter:before {
+  content: "\e006";
+  font-family: 'mr-tinker';
+}
+.icon-linkedin-sign:before {
+  content: "\f08c";
+  font-family: 'mr-tinker';
+}
+.icon-paperplane:before {
+  content: "\e008";
+  font-family: 'mr-tinker';
+}
+.icon-file-pdf:before {
+  content: "\e004";
+  font-family: 'mr-tinker';
+}
