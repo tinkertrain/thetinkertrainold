@@ -8,41 +8,21 @@
 include("./header.php");
 ?>
 
-<div class="row">
-
-  <section class="visible-desktop">
-    <h1>The Tinkertrain</h1>
-    <div class="train">
+<section role="main">
+  <div class="row">
+    <div class="columns large-12">
+      <h1>The Tinkertrain</h1>
     </div>
+  </div>
 
-    <div class="tinkertrain">
-      <img src="/site/templates/images/the-tinkertrain.png" alt="The Tinkertrain">
+  <div class="row">
+    <div class="large-12 columns">
+      <?php include("./menu.php"); ?>
     </div>
+  </div>
 
-    <div class="greeting visible-desktop">
-      <?= $page->greeting ?>
-    </div>
-
-    <?php include("./menu.php"); ?>
-  </section><!-- section.visible-desktop -->
-
-  <section class="visible-tablet">
-    <h1>The Tinkertrain</h1>
-    <div class="train">
-    </div>
-    <div class="tinkertrain">
-      <img src="/site/templates/images/the-tinkertrain.png" alt="The Tinkertrain">
-    </div>
-    <div class="greeting">
-      <?= $page->greeting ?>
-    </div>
-    <?php include("./menu.php"); ?>
-  </section><!-- section.visible-tablet -->
-
-  <section class="visible-phone">
-    <h1>The Tinkertrain</h1>
-    <?php include("./menu.php"); ?>
-    <div class="row tinker-phone">
+  <div class="row">
+    <div class="columns large-12">
       <div class="greeting">
         <?= $page->greeting ?>
       </div>
@@ -50,6 +30,7 @@ include("./header.php");
         <img src="/site/templates/images/the-tinkertrain.png" alt="The Tinkertrain">
       </div>
     </div>
-  </section><!-- section.visible-phone -->
+  </div>
+</section>
 
 <?php include("./footer.php"); ?>

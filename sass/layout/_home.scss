@@ -1,0 +1,47 @@
+.page-home {
+  section[role="main"] {
+    h1 {
+      font-size: 2.5rem;
+      width: 100%;
+      padding: 0.15rem 0 0 0;
+      margin-top: 0;
+      margin-bottom: $marginBottom;
+    }
+    .greeting {
+      position: relative;
+      height: auto;
+      width: 80%;
+      margin: 0 auto;
+      background: rgba(white, 0.6);
+      border: 2px solid rgba($lightblue, 0.4);
+      box-shadow: 0 0 5px rgba(#000, 0.2), inset 0 0 6px rgba(200, 200, 200, 1);
+      padding: 0px;
+      border-radius: 30px;
+      p {
+        margin: 0;
+        padding: 1.50rem;
+        font-size: 1.65rem;
+        line-height: 1.25;
+        color: $darkblue;
+        span {
+          font-size: 2rem;
+          margin: 0;
+          color: #3c6ca9;
+          font-weight: 400;
+        }
+      }
+    }
+    .tinkertrain {
+      position: relative;
+      margin-top: -2rem;
+      height: 196px;
+      img {
+        display: block;
+        position: absolute;
+        right: 10%;
+      }
+    }
+  }
+}
+
+
