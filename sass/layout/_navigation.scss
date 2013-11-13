@@ -4,99 +4,115 @@ nav{
   position: relative;
   margin-bottom: 2rem;
   width: 100%;
-  height: auto;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
   ul{
     margin: 0;
     padding: 0;
     text-align: center;
+    list-style: none;
     li{
-      display: inline-block;
-      vertical-align: top;
-      margin-bottom: 5px;
-      width: 33%;
-      &:last-child{
-        margin-right: 0;
+      position: absolute;
+      vertical-align: middle;
+      width: 50%;
+      @include transform( rotate(-60deg));
+      background-color: #fff;
+      top: 30px;
+      left: -50px;
+      &:nth-child(2) {
+        left: 10px;
+      }
+      &:nth-child(3) {
+        left: 70px;
+      }
+      &:nth-child(4) {
+        left: 130px;
+      }
+      &:nth-child(5) {
+        left: 190px;
+      }
+      &:nth-child(6) {
+        left: 250px;
       }
       a{
-        position: relative;
         display: block;
-        width: 95%;
-        height: 35px;
+        height: 45px;
         border-radius: 3px;
-        color: $lightbrown;
+        color: $darkbrown;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 400;
         font-size: 1.25rem;
         font-family: $kreon;
-        line-height: 35px;
+        line-height: 45px;
         &:hover{
           text-shadow: none;
           text-decoration: none;
           color: $lightbrown;
         }
       }
-      &:first-child a{
-        border: 1px solid darken($red, 10%);
-        background-color: darken($red, 10%);
-        &:hover{
-          background-color: $red;
-        }
-        &:active{
-          background-color: darken($red, 5%);
-        }
-      }
-      &:nth-child(2) a{
-        border: 1px solid darken($green, 10%);
-        background-color: darken($green, 10%);
-        &:hover{
-          background-color: $green;
-        }
-        &:active{
-          background-color: darken($green, 5%);
-        }
-      }
-      &:nth-child(3) a{
-        border: 1px solid darken(#3c6ca9, 10%);
-        background-color: darken(#3c6ca9, 5%);
-        &:hover{
-          background-color: #3c6ca9;
-        }
-        &:active{
-          background-color: darken(#3c6ca9, 10%);
-        }
-      }
-      &:nth-child(4) a{
-        border: 1px solid darken($blue, 10%);
-        background-color: darken($blue, 10%);
-        &:hover{
-          background-color: $blue;
-        }
-        &:active{
-          background-color: darken($blue, 5%);
-        }
-      }
-      &:nth-child(5) a{
-        border: 1px solid darken($sepia, 10%);
-        background-color: darken($sepia, 10%);
-        &:hover{
-          background-color: $sepia;
-        }
-        &:active{
-          background-color: darken($sepia, 5%);
-        }
-      }
-      &:nth-child(6) a{
-        border: 1px solid darken($sepia, 20%);
-        background-color: darken($sepia, 20%);
-        &:hover{
-          background-color: darken($sepia, 15%);
-        }
-        &:active{
-          background-color: darken($sepia, 10%);
-        }
-      }
+      // &:first-child a{
+      //   border: 1px solid darken($red, 10%);
+      //   background-color: darken($red, 10%);
+      //   &:hover{
+      //     background-color: $red;
+      //   }
+      //   &:active{
+      //     background-color: darken($red, 5%);
+      //   }
+      // }
+      // &:nth-child(2) a{
+      //   border: 1px solid darken($green, 10%);
+      //   background-color: darken($green, 10%);
+      //   &:hover{
+      //     background-color: $green;
+      //   }
+      //   &:active{
+      //     background-color: darken($green, 5%);
+      //   }
+      // }
+      // &:nth-child(3) a{
+      //   border: 1px solid darken(#3c6ca9, 10%);
+      //   background-color: darken(#3c6ca9, 5%);
+      //   &:hover{
+      //     background-color: #3c6ca9;
+      //   }
+      //   &:active{
+      //     background-color: darken(#3c6ca9, 10%);
+      //   }
+      // }
+      // &:nth-child(4) a{
+      //   border: 1px solid darken($blue, 10%);
+      //   background-color: darken($blue, 10%);
+      //   &:hover{
+      //     background-color: $blue;
+      //   }
+      //   &:active{
+      //     background-color: darken($blue, 5%);
+      //   }
+      // }
+      // &:nth-child(5) a{
+      //   border: 1px solid darken($sepia, 10%);
+      //   background-color: darken($sepia, 10%);
+      //   &:hover{
+      //     background-color: $sepia;
+      //   }
+      //   &:active{
+      //     background-color: darken($sepia, 5%);
+      //   }
+      // }
+      // &:nth-child(6) a{
+      //   border: 1px solid darken($sepia, 20%);
+      //   background-color: darken($sepia, 20%);
+      //   &:hover{
+      //     background-color: darken($sepia, 15%);
+      //   }
+      //   &:active{
+      //     background-color: darken($sepia, 10%);
+      //   }
+      // }
     }
   }
 }

@@ -11,7 +11,7 @@ include("./header.php");
 <section role="main">
   <div class="row">
     <div class="columns large-12">
-      <h1>The Tinkertrain</h1>
+        <h1><span>The</span>Tinkertrain</h1>
     </div>
   </div>
 
