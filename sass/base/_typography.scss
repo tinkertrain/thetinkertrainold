@@ -1,29 +1,32 @@
 /////////////////// Import fonts
 
-//Haymaker
+//Track
 
 @font-face {
-    font-family: 'haymakerregular';
-    src: url('../fonts/haymaker-webfont.eot');
-    src: url('../fonts/haymaker-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/haymaker-webfont.woff') format('woff'),
-         url('../fonts/haymaker-webfont.ttf') format('truetype'),
-         url('../fonts/haymaker-webfont.svg#haymakerregular') format('svg');
+    font-family: 'trackregular';
+    src: url('../fonts/track-webfont.woff') format('woff'),
+         url('../fonts/track-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);
+@font-face {
+    font-family: 'trackitalic';
+    src: url('../fonts/track_italic-webfont.woff') format('woff'),
+         url('../fonts/track_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-//thetinker-set (icons)
+// Andana
+@import url(http://fonts.googleapis.com/css?family=Andada:400,700);
+
+//thetinke (icons)
 
 @font-face {
-  font-family: 'mr-tinker';
-  src: url('../fonts/mr-tinker.eot');
-  src: url('../fonts/mr-tinker.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/mr-tinker.woff') format('woff'),
-       url('../fonts/mr-tinker.ttf') format('truetype'),
-       url('../fonts/mr-tinker.svg#mr-tinker') format('svg');
+  font-family: 'thetinke';
+  src: url('../fonts/thetinke.woff') format('woff'),
+       url('../fonts/thetinke.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -32,4 +35,7 @@
 
 $haymaker: 'haymakerregular', georgia, serif;
 $kreon: 'Kreon', georgia, serif;
-$thetinker-set: 'mr-tinker';
+$thetinker-set: 'thetinke';
+
+$track: 'trackregular', georgia, serif;
+$trackItalic: 'trackitalic', georgia, serif;

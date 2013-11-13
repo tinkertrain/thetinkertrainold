@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);
+@import url(http://fonts.googleapis.com/css?family=Andada:400,700);
 /* ==========================================================================
    VENDOR
    ========================================================================== */
@@ -1825,115 +1825,83 @@ button.large, .button.large {
    BASE
    ========================================================================== */
 @font-face {
-  font-family: 'haymakerregular';
-  src: url("../fonts/haymaker-webfont.eot");
-  src: url("../fonts/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/haymaker-webfont.woff") format("woff"), url("../fonts/haymaker-webfont.ttf") format("truetype"), url("../fonts/haymaker-webfont.svg#haymakerregular") format("svg");
+  font-family: 'trackregular';
+  src: url("../fonts/track-webfont.woff") format("woff"), url("../fonts/track-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'mr-tinker';
-  src: url("../fonts/mr-tinker.eot");
-  src: url("../fonts/mr-tinker.eot?#iefix") format("embedded-opentype"), url("../fonts/mr-tinker.woff") format("woff"), url("../fonts/mr-tinker.ttf") format("truetype"), url("../fonts/mr-tinker.svg#mr-tinker") format("svg");
+  font-family: 'trackitalic';
+  src: url("../fonts/track_italic-webfont.woff") format("woff"), url("../fonts/track_italic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-/* line 2, ../sass/base/_icons.scss */
-[data-icon]:before {
-  font-family: 'mr-tinker';
-  content: attr(data-icon);
-  speak: none;
+@font-face {
+  font-family: 'thetinke';
+  src: url("../fonts/thetinke.woff") format("woff"), url("../fonts/thetinke.ttf") format("truetype");
   font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
+  font-style: normal;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-/* line 19, ../sass/base/_icons.scss */
-.icon-moon-fill, .icon-sun-stroke, .icon-exit, .icon-new-tab, .icon-warning, .icon-home, .icon-envelope, .icon-twitter, .icon-linkedin-sign, .icon-paperplane, .icon-file-pdf {
+/* line 1, ../sass/base/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'thetinke';
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 29, ../sass/base/_icons.scss */
-.icon-moon-fill:before {
-  content: "\e001";
-  font-family: 'mr-tinker';
+/* line 15, ../sass/base/_icons.scss */
+.icon-twitter:before {
+  content: "\e600";
+}
+
+/* line 18, ../sass/base/_icons.scss */
+.icon-github:before {
+  content: "\e602";
+}
+
+/* line 21, ../sass/base/_icons.scss */
+.icon-envelope-alt:before {
+  content: "\e601";
+}
+
+/* line 24, ../sass/base/_icons.scss */
+.icon-remove-sign:before {
+  content: "\e605";
+}
+
+/* line 27, ../sass/base/_icons.scss */
+.icon-file-text:before {
+  content: "\e608";
+}
+
+/* line 30, ../sass/base/_icons.scss */
+.icon-external-link:before {
+  content: "\e609";
 }
 
 /* line 33, ../sass/base/_icons.scss */
-.icon-sun-stroke:before {
-  content: "\e002";
-  font-family: 'mr-tinker';
+.icon-linkedin:before {
+  content: "\e607";
 }
 
-/* line 37, ../sass/base/_icons.scss */
-.icon-exit:before {
-  content: "\e000";
-  font-family: 'mr-tinker';
+/* line 36, ../sass/base/_icons.scss */
+.icon-beaker:before {
+  content: "\e603";
 }
 
-/* line 41, ../sass/base/_icons.scss */
-.icon-new-tab:before {
-  content: "\e003";
-  font-family: 'mr-tinker';
-}
-
-/* line 45, ../sass/base/_icons.scss */
-.icon-warning:before {
-  content: "\e005";
-  font-family: 'mr-tinker';
-}
-
-/* line 49, ../sass/base/_icons.scss */
-.icon-home:before {
-  content: "\e007";
-  font-family: 'mr-tinker';
-}
-
-/* line 53, ../sass/base/_icons.scss */
-.icon-envelope:before {
-  content: "\f003";
-  font-family: 'mr-tinker';
-}
-
-/* line 57, ../sass/base/_icons.scss */
-.icon-twitter:before {
-  content: "\e006";
-  font-family: 'mr-tinker';
-}
-
-/* line 61, ../sass/base/_icons.scss */
-.icon-linkedin-sign:before {
-  content: "\f08c";
-  font-family: 'mr-tinker';
-}
-
-/* line 65, ../sass/base/_icons.scss */
-.icon-paperplane:before {
-  content: "\e008";
-  font-family: 'mr-tinker';
-}
-
-/* line 69, ../sass/base/_icons.scss */
-.icon-file-pdf:before {
-  content: "\e004";
-  font-family: 'mr-tinker';
+/* line 39, ../sass/base/_icons.scss */
+.icon-list-ul:before {
+  content: "\e604";
 }
 
 /* ==========================================================================
@@ -2334,7 +2302,7 @@ input[type='submit']:hover {
 }
 /* line 141, ../sass/layout/_pages.scss */
 .error:before, .parsley-error-list li:before {
-  font-family: "mr-tinker";
+  font-family: "thetinke";
   margin-right: 10px;
 }
 
