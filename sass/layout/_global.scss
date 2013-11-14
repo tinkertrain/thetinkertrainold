@@ -42,7 +42,8 @@ h1, h2, h3, h4 {
 // Containers
 
 header, footer, section[role="main"] {
-  max-width: em(960);
+  min-width: 400px;
+  max-width: 960px;
   width: 100%;
   padding: 0 1.5em;
   margin-left: auto;

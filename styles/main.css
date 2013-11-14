@@ -567,14 +567,15 @@ h1, h2, h3, h4 {
 
 /* line 44, ../sass/layout/_global.scss */
 header, footer, section[role="main"] {
-  max-width: 60em;
+  min-width: 400px;
+  max-width: 960px;
   width: 100%;
   padding: 0 1.5em;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 52, ../sass/layout/_global.scss */
+/* line 53, ../sass/layout/_global.scss */
 section[role="main"] {
   margin-bottom: 2em;
 }
@@ -592,7 +593,19 @@ header h1 {
   position: relative;
   display: inline;
 }
-/* line 10, ../sass/layout/_header.scss */
+@media (min-width: 34.375em) {
+  /* line 4, ../sass/layout/_header.scss */
+  header h1 {
+    font-size: 4em;
+  }
+}
+@media (min-width: 43.75em) {
+  /* line 4, ../sass/layout/_header.scss */
+  header h1 {
+    font-size: 4.5em;
+  }
+}
+/* line 16, ../sass/layout/_header.scss */
 header h1 span {
   text-align: left;
   color: #786f6b;
@@ -674,37 +687,86 @@ footer nav a:hover, footer nav a:active {
 /*
    PAGES
    ========================================================================== */
-/* line 2, ../sass/layout/_home.scss */
-.page-home section[role="main"] {
-  background: transparent url("../images/train-fullwidth.png") 70% 0 no-repeat;
+@media (min-width: 34.375em) {
+  /* line 2, ../sass/layout/_home.scss */
+  .page-home section[role="main"] {
+    background: transparent url("../images/train-fullwidth.png") -220px 0 no-repeat;
+  }
+}
+@media (min-width: 43.75em) {
+  /* line 2, ../sass/layout/_home.scss */
+  .page-home section[role="main"] {
+    background-position: -150px 0;
+  }
+}
+@media (min-width: 50em) {
+  /* line 2, ../sass/layout/_home.scss */
+  .page-home section[role="main"] {
+    background-position: -100px 0;
+  }
+}
+@media (min-width: 55.3125em) {
+  /* line 2, ../sass/layout/_home.scss */
+  .page-home section[role="main"] {
+    background-position: -50px 0;
+  }
 }
 
-/* line 7, ../sass/layout/_home.scss */
+/* line 19, ../sass/layout/_home.scss */
 .greeting {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid #98b3d5;
-  padding: 0.75em 1em;
+  padding: 0.5em 1em;
   color: #1b3b68;
-  width: 70%;
+  width: 90%;
   margin-left: auto;
+  margin-right: auto;
   font-size: 1.125em;
   line-height: 1.2;
+  margin-bottom: 1em;
 }
-/* line 16, ../sass/layout/_home.scss */
+@media (min-width: 34.375em) {
+  /* line 19, ../sass/layout/_home.scss */
+  .greeting {
+    max-width: 250px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-right: 0;
+  }
+}
+@media (min-width: 43.75em) {
+  /* line 19, ../sass/layout/_home.scss */
+  .greeting {
+    margin-right: 5%;
+  }
+}
+@media (min-width: 58.125em) {
+  /* line 19, ../sass/layout/_home.scss */
+  .greeting {
+    margin-right: 10%;
+  }
+}
+/* line 42, ../sass/layout/_home.scss */
 .greeting span {
   color: #7498c6;
   display: block;
   font-size: 2em;
 }
-/* line 20, ../sass/layout/_home.scss */
+/* line 46, ../sass/layout/_home.scss */
 .greeting span:last-of-type {
   color: #4571a8;
   text-align: right;
   font-size: 1.75em;
 }
 
-/* line 28, ../sass/layout/_home.scss */
-.tinkertrain {
-  padding-top: 2em;
-  text-align: right;
+/* line 55, ../sass/layout/_home.scss */
+.tinkertrain img {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 34.375em) {
+  /* line 55, ../sass/layout/_home.scss */
+  .tinkertrain img {
+    margin-top: 3.5em;
+  }
 }

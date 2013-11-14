@@ -7,6 +7,12 @@ header {
 		font-size: 2.65em;
 		position: relative;
 		display: inline;
+		@include breakpoint($pit-stop-1) {
+		    font-size: 4em;
+		}
+		@include breakpoint($pit-stop-2) {
+		    font-size: em(72);
+		  }
 		span {
 			text-align: left;
 			color: $brown-light;
