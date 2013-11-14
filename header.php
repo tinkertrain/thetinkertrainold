@@ -23,16 +23,7 @@ $template = $config->urls->templates;
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-            <div class="row">
-              <div class="large-12 columns">
-                <?php include("./menu.php"); ?>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="columns large-12">
-                  <h1><span>The</span>Tinkertrain</h1>
-              </div>
-            </div>
+        <header role="banner">
+            <?php include("./menu.php"); ?>
+            <h1><span>The</span>Tinkertrain</h1>
         </header>

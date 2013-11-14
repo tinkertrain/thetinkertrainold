@@ -1,11 +1,8 @@
         <footer>
-            <div class="row">
-                <div class="columns large-12">
-                    <p class="rights">
-                        <?= date('Y') ?> &copy; All rights reserved
-                    </p>
-                </div>
-            </div>
+            <?php include("./menu-contact.php"); ?>
+            <p role="contentinfo">
+                <?= date('Y') ?> &copy; All rights reserved
+            </p>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

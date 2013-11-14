@@ -9,16 +9,12 @@ include("./header.php");
 ?>
 
 <section role="main">
-  <div class="row">
-    <div class="columns large-12">
       <div class="greeting">
         <?= $page->greeting ?>
       </div>
       <div class="tinkertrain">
-        <img src="/site/templates/images/the-tinkertrain.png" alt="The Tinkertrain">
+        <img src="/site/templates/images/the-tinkertrain.png" alt="Picture if the Tinkertrain character">
       </div>
-    </div>
-  </div>
 </section>
 
 <?php include("./footer.php"); ?>
