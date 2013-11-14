@@ -153,7 +153,7 @@ input[type='submit']{
   margin: 0;
   li{
     background-color: rgba(lighten($red, 40%), 0.8);
-    @include border-radius(5px);
+    border-radius: 5px;
     padding-right: 10px;
     margin-top: 5px;
   }
@@ -266,7 +266,7 @@ input[type='submit']{
     left:50%;
     margin-left: -150px;
     z-index: 500;
-    @include box-shadow( 2px 2px 10px rgba($darkbrown, 0.3));
+    box-shadow: 2px 2px 10px rgba($darkbrown, 0.3);
     p{
       font-size: 18px;
       line-height: 1.5em;

@@ -215,7 +215,7 @@ article {
     border-radius: 3px;
     text-align: center;
      background-color: rgb(154,63,55);
-      @include filter-gradient(#9a3f37, #625954, horizontal);
+      // @include filter-gradient(#9a3f37, #625954, horizontal);
       @include background-image(linear-gradient(left,  rgba(154,63,55,1) 0%,rgba(154,63,55,1) 25%,rgba(59,134,90,1) 25%,rgba(59,134,90,1) 50%,rgba(58,87,122,1) 50%,rgba(58,87,122,1) 75%,rgba(98,89,84,1) 75%,rgba(98,89,84,1) 100%));
     @include transition(0.7s);
     opacity: 0.3;
