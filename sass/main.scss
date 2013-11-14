@@ -1,17 +1,12 @@
-// @import "compass/css3";
-
 /* ==========================================================================
    VENDOR
    ========================================================================== */
+
 @import "../bourbon/bourbon";
 @import "../neat/neat";
 @import "breakpoint";
 @import '../bower_components/foundation/scss/normalize';
-// @import '../bower_components/foundation/scss/foundation/components/global';
-// @import '../bower_components/foundation/scss/foundation/components/grid';
-// @import '../bower_components/foundation/scss/foundation/components/visibility';
-// @import '../bower_components/foundation/scss/foundation/components/buttons';
-// @import '../../bower_components/foundation/scss/foundation/components/forms';
+
 
 /* ==========================================================================
    BASE
@@ -23,14 +18,19 @@
 @import "base/icons";
 @import "base/mymixins";
 
-// @import "bootstrap";
-
 /* ==========================================================================
    LAYOUT
    ========================================================================== */
 
 @import "layout/global";
+@import "layout/header";
+@import "layout/footer";
 @import "layout/navigation";
+
+/*
+   PAGES
+   ========================================================================== */
+
 @import "layout/home";
-@import "layout/pages";
-@import "layout/blog";
+// @import "layout/pages";
+// @import "layout/blog";

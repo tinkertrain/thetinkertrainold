@@ -1,0 +1,16 @@
+footer {
+	background-color: $brown-light;
+	box-shadow: inset 0 em(5) em(5) rgba($brown-dark, 0.5);
+	overflow: hidden;
+	height: 2em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	nav {
+		float: left;
+	}
+	p {
+		float: right;
+		font-size: em(12);
+		color: $bg;
+	}
+}

@@ -1,82 +1,54 @@
-html{
-  background-color: $darkbrown;
-}
-
-body{
-  margin-top: 3em;
-  padding-top: $marginBottom;
-  @include background(
-    linear-gradient(top, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.0) 4%, rgba(255,255,255,0.0) 96%, rgba(255,255,255,0.4) 100%),
-    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUyJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjYmViNGFhJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2Q5Y2ZjNScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==')
-    );
-  -webkit-font-smoothing: subpixel-antialiased;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
-  position: relative;
-  -webkit-backface-visibility: hidden;
-  font-family: $kreon;
+html {
+  background-color: $brown-light;
   font-size: 16px;
   line-height: 1.5;
-  color: $darkbrown;
-  font-weight: 400;
 }
 
-/////////////// General Type Styles
-
-h1{
-  font-family: $haymaker;
-  font-size: 44px;
-  letter-spacing: -2px;
-  text-align: center;
-  color: $darkbrown;
-  text-shadow: 1px -1px 0 white;
-  padding: 15px 0 10px;
+body {
+  background-color: $bg;
+  font-family: $andada;
+  font-size: em(18);
+  margin-top: 2em;
+  box-shadow: 0 em(-5) em(5) rgba($brown-dark, 0.5);
+  padding-top: 1em;
   font-weight: normal;
-  margin: 50px 0 50px;
-  // background-color: rgba($brown, 0.2);
-  border-radius: 3px;
 }
 
-h2{
-  color: $red;
-  font-family: $kreon;
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 20px;
+p {
+  margin: 0;
 }
 
-h3{
-  font-family: $haymaker;
-  letter-spacing: -1px;
+ul {
+  margin: 0;
 }
 
-a{
-  color: $green;
-  @include transition(0.3s);
+a {
   text-decoration: none;
-  &:hover{
-    color: darken($green, 20%);
-    text-shadow: 0 0 3px $green;
-    text-decoration: none;
+  color: $brown-light;
+  &:hover, &:active {
+    text-decoration: underline;
   }
 }
 
-::selection {
-  background: rgba(#f2b480, 0.3); /* Safari */
-  }
-::-moz-selection {
-  background: rgba(#f2b480, 0.3); /* Firefox */
+// Headings
+
+h1, h2, h3, h4 {
+  font-family: $track;
+  margin: 0;
+  font-weight: normal;
 }
 
 
+// Containers
 
-/////////////// Footer
-
-.rights{
-  position: absolute;
-  font-size: 14px;
-  color: rgba($lightbrown, 0.8);
-  left: 0;
-  text-align: center;
+header, footer, section[role="main"] {
+  max-width: em(960);
   width: 100%;
-  bottom: -40px;
+  padding: 0 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section[role="main"] {
+  margin-bottom: 2em;
 }

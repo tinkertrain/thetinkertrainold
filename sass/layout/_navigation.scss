@@ -2,4 +2,50 @@
    NAVIGATION
    ========================================================================== */
 
+nav {
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			display: inline-block;
+		}
+	}
 
+	// Header nav
+	// ---------------------------------
+	header & {
+		font-family: $track;
+		text-align: right;
+		margin-bottom: 4em;
+		li {
+			margin-right: 0.5em;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		a {
+			font-size: em(14);
+		}
+	}
+
+	// Footer nav
+	// ---------------------------------
+	footer & {
+		li {
+			margin-right: 0.5em;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		a {
+			color: $bg;
+			&:hover, &:active {
+				color: $brown-dark;
+				text-decoration: none;
+			}
+			span {
+				@extend %ir;
+			}
+		}
+	}
+}
