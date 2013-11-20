@@ -86,6 +86,12 @@
 			text-align: left;
 			font-size: em(14);
 			margin-bottom: 1em;
+			a {
+				color: $brown-dark;
+				&:hover, &:active {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 	.about-this-site {

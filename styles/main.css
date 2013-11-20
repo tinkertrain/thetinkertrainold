@@ -551,7 +551,7 @@ ul {
 /* line 26, ../sass/layout/_global.scss */
 a {
   text-decoration: none;
-  color: #786f6b;
+  color: #34824f;
   transition: all 0.4s;
 }
 
@@ -752,6 +752,7 @@ header nav li:last-child {
 }
 /* line 27, ../sass/layout/_navigation.scss */
 header nav a {
+  color: #786f6b;
   padding: 0.25em 0.3em;
   font-size: 0.875em;
   -webkit-transition-property: border-color color;
@@ -762,24 +763,24 @@ header nav a {
   transition-timing-function: ease-in-out;
   border-bottom: 1px solid #efefef;
 }
-/* line 37, ../sass/layout/_navigation.scss */
+/* line 38, ../sass/layout/_navigation.scss */
 header nav a:hover, header nav a:active, header nav a.current {
   color: #3e3633;
   border-bottom: 1px solid #3e3633;
 }
-/* line 47, ../sass/layout/_navigation.scss */
+/* line 48, ../sass/layout/_navigation.scss */
 footer nav li {
   margin-right: 0.75em;
 }
-/* line 49, ../sass/layout/_navigation.scss */
+/* line 50, ../sass/layout/_navigation.scss */
 footer nav li:last-child {
   margin-right: 0;
 }
-/* line 53, ../sass/layout/_navigation.scss */
+/* line 54, ../sass/layout/_navigation.scss */
 footer nav a {
   color: #efefef;
 }
-/* line 55, ../sass/layout/_navigation.scss */
+/* line 56, ../sass/layout/_navigation.scss */
 footer nav a:hover, footer nav a:active {
   color: #3e3633;
   text-decoration: none;
@@ -817,6 +818,7 @@ footer nav a:hover, footer nav a:active {
 .greeting {
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid #98b3d5;
+  border-radius: 5px;
   padding: 0.5em 1em;
   color: #1b3b68;
   width: 90%;
@@ -825,6 +827,7 @@ footer nav a:hover, footer nav a:active {
   font-size: 1.125em;
   line-height: 1.2;
   margin-bottom: 1em;
+  box-shadow: inset 0 0 20px rgba(116, 152, 198, 0.3);
 }
 @media (min-width: 34.375em) {
   /* line 19, ../sass/layout/_home.scss */
@@ -847,26 +850,26 @@ footer nav a:hover, footer nav a:active {
     margin-right: 10%;
   }
 }
-/* line 42, ../sass/layout/_home.scss */
+/* line 44, ../sass/layout/_home.scss */
 .greeting span {
   color: #7498c6;
   display: block;
   font-size: 2em;
 }
-/* line 46, ../sass/layout/_home.scss */
+/* line 48, ../sass/layout/_home.scss */
 .greeting span:last-of-type {
   color: #4571a8;
   text-align: right;
   font-size: 1.75em;
 }
 
-/* line 55, ../sass/layout/_home.scss */
+/* line 57, ../sass/layout/_home.scss */
 .tinkertrain img {
   display: block;
   margin: 0 auto;
 }
 @media (min-width: 34.375em) {
-  /* line 55, ../sass/layout/_home.scss */
+  /* line 57, ../sass/layout/_home.scss */
   .tinkertrain img {
     margin-top: 3.5em;
   }
@@ -970,7 +973,15 @@ footer nav a:hover, footer nav a:active {
   font-size: 0.875em;
   margin-bottom: 1em;
 }
-/* line 92, ../sass/layout/_about.scss */
+/* line 89, ../sass/layout/_about.scss */
+.extra-info .bubble ul a {
+  color: #3e3633;
+}
+/* line 91, ../sass/layout/_about.scss */
+.extra-info .bubble ul a:hover, .extra-info .bubble ul a:active {
+  text-decoration: underline;
+}
+/* line 98, ../sass/layout/_about.scss */
 .extra-info .about-this-site:before {
   margin-left: 13px;
 }

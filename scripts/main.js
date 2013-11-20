@@ -137,13 +137,14 @@
   $extraInfo.on('click', 'button', function(e) {
     e.preventDefault();
     var $this = $(this);
+
     if ($this.hasClass('icon-beaker')) {
-      $('.about-this-site').fadeOut(200, function(){
+      $('.about-this-site').fadeOut(100, function(){
         $('.technologies').fadeIn(200);
       });
     }
     else {
-      $('.technologies').fadeOut(200, function(){
+      $('.technologies').fadeOut(100, function(){
         $('.about-this-site').fadeIn(200);
       });
     }
