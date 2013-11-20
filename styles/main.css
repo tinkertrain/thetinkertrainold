@@ -567,7 +567,7 @@ h1, h2, h3, h4 {
 }
 
 /* line 45, ../sass/layout/_global.scss */
-header, footer, section[role="main"] {
+header, section[role="main"] {
   min-width: 400px;
   max-width: 960px;
   width: 100%;
@@ -577,6 +577,12 @@ header, footer, section[role="main"] {
 }
 
 /* line 54, ../sass/layout/_global.scss */
+footer {
+  min-width: 400px;
+  width: 100%;
+}
+
+/* line 59, ../sass/layout/_global.scss */
 section[role="main"] {
   margin-bottom: 2em;
 }
@@ -627,16 +633,22 @@ header .prefix {
 footer {
   background-color: #786f6b;
   box-shadow: inset 0 0.3125em 0.3125em rgba(62, 54, 51, 0.5);
-  overflow: hidden;
   height: 2em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 /* line 8, ../sass/layout/_footer.scss */
+footer .wrapped {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  overflow: hidden;
+}
+/* line 14, ../sass/layout/_footer.scss */
 footer nav {
   float: left;
 }
-/* line 11, ../sass/layout/_footer.scss */
+/* line 17, ../sass/layout/_footer.scss */
 footer p {
   float: right;
   font-size: 0.75em;

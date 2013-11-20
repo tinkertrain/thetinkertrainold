@@ -1,8 +1,10 @@
         <footer>
-            <?php include("./menu-contact.php"); ?>
-            <p role="contentinfo">
-                <?= date('Y') ?> &copy; All rights reserved
-            </p>
+            <div class="wrapped">
+                <?php include("./menu-contact.php"); ?>
+                <p role="contentinfo">
+                    <?= date('Y') ?> &copy; All rights reserved
+                </p>
+            </div>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
