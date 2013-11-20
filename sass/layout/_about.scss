@@ -1,4 +1,11 @@
-img[src*="folder"]{
+.page-about {
+	section[role="main"] {
+		& > p {
+			margin-bottom: 1em;
+		}
+	}
+}
+img[src*="folder"] {
   display: block;
   margin: 20px auto 50px;
 }

@@ -2,7 +2,7 @@
 $template = $config->urls->templates;
  ?>
 <!DOCTYPE html>
-<html class="no-js">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,9 +24,17 @@ $template = $config->urls->templates;
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header role="banner">
+        <header role="banner" <?php if($page->get("name") !='home') echo "class='page'"; ?>>
+
             <?php include("./menu.php"); ?>
+
+            <?php if($page->get("name") !='home'): ?>
+                <h2><?= $page->title ?></h2>
+            <?php endif; ?>
+
             <h1><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
-            <h2 id="header-<?= $page->title ?>"><?= $page->title ?></h2>
+
+
+
         </header>
 

@@ -17,8 +17,10 @@ nav {
     font-family: $track;
     text-align: right;
     margin-bottom: 4em;
+    // border-bottom: 1px dashed darken($bg, 20%);
+
     li {
-      margin-right: 0.25em;
+      margin-right: 0.5em;
       &:last-child {
         margin-right: 0;
       }
@@ -26,8 +28,17 @@ nav {
     a {
       padding: 0.25em 0.3em;
       font-size: em(14);
-      &:hover, &:active {
-        background-color: rgba($brown-light, 0.2);
+      // border-top: 1px dashed rgba($bg, 0);
+      // border-right: 1px dashed rgba($bg, 0);
+      // border-left: 1px dashed rgba($bg, 0);
+      // border-top-left-radius: 6px;
+      // border-top-right-radius: 6px;
+      &:hover, &:active,  &.current {
+        // border-top: 1px dashed darken($bg, 20%);
+        // border-right: 1px dashed darken($bg, 20%);
+        // border-left: 1px dashed darken($bg, 20%);
+        color: $brown-dark;
+        border-bottom: 1px solid $brown-dark;
       }
     }
   }

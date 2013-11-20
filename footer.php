@@ -8,32 +8,19 @@
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script src="/site/templates/bower_components/slabText/js/jquery.slabtext.js"></script>
+
         <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-        <script>
-          WebFont.load({
-            google: {
-              families: ['Andada', 'Andada:700']
-            },
-            custom: {
-                families: ['trackregular', 'trackitalic', 'thetinke']
-            },
-            loading: function() {
-                $("header h1").slabText({
-                        "viewportBreakpoint":380
-                    });
-            }
-          });
-        </script>
+
+        <script src="/site/templates/scripts/main-min.js"></script>
+
         <?php if($page->get("name") == "work") :?>
-            <script src="/site/templates/scripts/main-min.js"></script>
+            echo "work";
         <?php endif; ?>
+
         <?php if($page->get("name") == "blog") :?>
             <script src="/site/templates/scripts/blog.js"></script>
         <?php endif; ?>
-        <?php if($page->get("name") == "contact") :?>
-            <script src="/site/templates/scripts/parsley-min.js"></script>
-        <?php endif; ?>
+
 
         <!-- Google Analytics -->
         <script>

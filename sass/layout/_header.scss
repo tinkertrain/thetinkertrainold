@@ -1,36 +1,78 @@
 header {
-	margin-bottom: 4em;
-	text-align: center;
-	h1 {
-		font-size: 500%;
-		line-height: 1;
-		color: $brown-dark;
-	}
-	.prefix {
-		display: block;
-		text-align: left;
-		color: $brown-light;
-		font-size: 0.625em;
-	}
-
+  margin-bottom: 4em;
+  position: relative;
+  h1 {
+    font-size: 300%;
+    line-height: 1;
+    color: $brown-dark;
+  }
+  .prefix {
+    display: block;
+    text-align: left;
+    color: $brown-light;
+    font-size: 0.625em;
+  }
+  &.page  {
+    h1 {
+      width: 92%;
+      margin-left: 8%;
+      transition-property: font-size;
+      transition-duration: 0.1s;
+      transition-timing-function: ease-in-out;
+    }
+    h2 {
+      @include transform(rotate(600deg));
+      width: 20%;
+      position: absolute;
+      left: -100%;
+      bottom: 1.15em;
+      color: $brown-light;
+      -webkit-transition-property: left -webkit-transform;
+      transition-property: left transform;
+      -webkit-transition-duration: 1s 2s;
+      transition-duration: 1s;
+      -webkit-transition-delay: 0.5s 1s;
+      transition-delay: 0.5s;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      @include breakpoint($pit-stop-1) {
+        bottom: 1.5em;
+      }
+      @include breakpoint($pit-stop-2) {
+        bottom: 2em;
+      }
+      @include breakpoint($pit-stop-4) {
+        bottom: 2.15em;
+      }
+      &.animated {
+        left: 0;
+        @include transform(rotate(-90deg));
+        @include breakpoint($pit-stop-1) {
+          left: -3%;
+        }
+        @include breakpoint($pit-stop-4) {
+          left: -4%;
+        }
+      }
+    }
+  }
 }
 .slabtexted .slabtext
 {
-	display:-moz-inline-box;
-	display:inline-block;
-	white-space:nowrap;
+  display:inline-block;
+  white-space:nowrap;
 }
 .slabtextinactive .slabtext
 {
-	display:inline;
-	white-space:normal;
-	font-size:1em !important;
-	letter-spacing:inherit !important;
-	word-spacing:inherit !important;
-	*letter-spacing:0 !important;
-	*word-spacing:0 !important;
+  display:inline;
+  white-space:normal;
+  font-size:1em !important;
+  letter-spacing:inherit !important;
+  word-spacing:inherit !important;
+  *letter-spacing:0 !important;
+  *word-spacing:0 !important;
 }
 .slabtextdone .slabtext
 {
-	display:block;
+  display:block;
 }
