@@ -540,29 +540,30 @@ body {
 
 /* line 18, ../sass/layout/_global.scss */
 p {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-/* line 22, ../sass/layout/_global.scss */
+/* line 23, ../sass/layout/_global.scss */
 ul {
   margin: 0;
 }
 
-/* line 26, ../sass/layout/_global.scss */
+/* line 27, ../sass/layout/_global.scss */
 a {
   text-decoration: none;
   color: #34824f;
   transition: all 0.4s;
 }
 
-/* line 34, ../sass/layout/_global.scss */
+/* line 35, ../sass/layout/_global.scss */
 h1, h2, h3, h4 {
   font-family: "trackregular", georgia, serif;
   margin: 0;
   font-weight: normal;
 }
 
-/* line 43, ../sass/layout/_global.scss */
+/* line 44, ../sass/layout/_global.scss */
 header, section[role="main"] {
   min-width: 400px;
   max-width: 960px;
@@ -572,18 +573,18 @@ header, section[role="main"] {
   margin-right: auto;
 }
 
-/* line 52, ../sass/layout/_global.scss */
+/* line 53, ../sass/layout/_global.scss */
 footer {
   min-width: 400px;
   width: 100%;
 }
 
-/* line 57, ../sass/layout/_global.scss */
+/* line 58, ../sass/layout/_global.scss */
 section[role="main"] {
   margin-bottom: 2em;
 }
 
-/* line 63, ../sass/layout/_global.scss */
+/* line 64, ../sass/layout/_global.scss */
 button {
   border: 0;
   background: transparent;
