@@ -137,15 +137,17 @@
   $extraInfo.on('click', 'button', function(e) {
     e.preventDefault();
     var $this = $(this);
-
+    var offset = $(this).offset();
     if ($this.hasClass('icon-beaker')) {
       $('.about-this-site').fadeOut(100, function(){
         $('.technologies').fadeIn(200);
+        $(window).scrollTop(offset.top);
       });
     }
     else {
       $('.technologies').fadeOut(100, function(){
         $('.about-this-site').fadeIn(200);
+        $(window).scrollTop(offset.top);
       });
     }
 
