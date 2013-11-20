@@ -12,7 +12,7 @@
         <script>
             (function() {
               // Function to slabtext the H1 headings
-                $("h1").slabText({
+                $("header h1").slabText({
                         // Don't slabtext the headers if the viewport is under 380px
                         "viewportBreakpoint":380
                     });

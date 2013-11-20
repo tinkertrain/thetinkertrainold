@@ -7,36 +7,33 @@
 
 include("./header.php");
 ?>
-<div class="row visible-phone">
-  <?php include("./menu.php"); ?>
-</div>
-<div class="row">
-  <div class="span12">
-    <h1><?= $page->title ?></h1>
+<section role="main">
+  <h1 id="header-about"><?= $page->title ?></h1>
+
+  <?= $page->body; ?>
+
+  <div class="cv">
+    <a href="#">
+      <img src="/site/templates/images/tinkertrain-folder.png" alt="Illustration of the Tinkertrain handing out documents">
+      <p>Oh, and in case you are interested here's my CV</p>
+    </a>
   </div>
-</div>
-<div class="row">
-  <div class="span12">
-    <?= $page->body; ?>
-  </div>
-</div>
-<div class="row">
-    <div class="span12">
-      <img src="/site/templates/images/tinkertrain-folder.png" alt="The Tinkertrain">
+
+  <section class="extra-info">
+    <div>
+      <button>Technologies</button>
+      <button>About this site</button>
     </div>
-</div>
-<div class="row">
-  <div class="span12">
-    <h3>About this website</h3>
-  </div>
-</div>
-<div class="row about-wb">
-  <div class="span12">
-    <?= $page->aboutwebsite ?>
-  </div>
-</div>
-<div class="row visible-tablet visible-desktop">
-  <?php include("./menu.php"); ?>
-</div>
+    <div class="about-this-site">
+      <?php  echo $page->aboutwebsite; ?>
+    </div>
+    <div class="technologies">
+      <?php  echo $page->technologies; ?>
+    </div>
+  </section>
+
+</section>
+
+
 
 <?php include("./footer.php"); ?>
