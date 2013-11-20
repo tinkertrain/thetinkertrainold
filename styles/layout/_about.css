@@ -1,21 +1,45 @@
 /*
-Syntax error: File to import not found or unreadable: breakpoint.
-              Load paths:
-                /Users/jpablo/Sites/tinkertrain/site/templates/sass
-                /Library/Ruby/Gems/2.0.0/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets
-                /Applications/CodeKit.app/Contents/Resources/engines/bourbon/bourbon/app/assets/stylesheets
-                /Applications/CodeKit.app/Contents/Resources/engines/neat
-                /Applications/CodeKit.app/Contents/Resources/engines/susy/sass
-                Compass::SpriteImporter
-        on line 7 of /Users/jpablo/Sites/tinkertrain/site/templates/sass/main.scss
+Syntax error: Undefined variable: "$blue-dark".
+        on line 28 of /Users/jpablo/Sites/tinkertrain/site/templates/sass/layout/_about.scss
 
 Backtrace:
-/Users/jpablo/Sites/tinkertrain/site/templates/sass/main.scss:7
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:66:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:278:in `visit_import'
+/Users/jpablo/Sites/tinkertrain/site/templates/sass/layout/_about.scss:28
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:369:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:174:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:390:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:174:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:390:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:392:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:174:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:390:in `visit_rule'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/tree/visitors/perform.rb:153:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.1/lib/sass/stack.rb:79:in `block in with_base'
@@ -61,4 +85,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: breakpoint.\A               Load paths:\A                 /Users/jpablo/Sites/tinkertrain/site/templates/sass\A                 /Library/Ruby/Gems/2.0.0/gems/compass-0.13.alpha.10/frameworks/compass/stylesheets\A                 /Applications/CodeKit.app/Contents/Resources/engines/bourbon/bourbon/app/assets/stylesheets\A                 /Applications/CodeKit.app/Contents/Resources/engines/neat\A                 /Applications/CodeKit.app/Contents/Resources/engines/susy/sass\A                 Compass::SpriteImporter\A         on line 7 of /Users/jpablo/Sites/tinkertrain/site/templates/sass/main.scss"; }
+  content: "Syntax error: Undefined variable: \"$blue-dark\".\A         on line 28 of /Users/jpablo/Sites/tinkertrain/site/templates/sass/layout/_about.scss"; }
