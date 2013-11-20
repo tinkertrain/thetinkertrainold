@@ -510,7 +510,7 @@ table {
 }
 
 /* line 20, ../sass/base/_mymixins.scss */
-footer nav a span {
+footer nav a span, .extra-info button span {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -581,6 +581,12 @@ footer {
 /* line 57, ../sass/layout/_global.scss */
 section[role="main"] {
   margin-bottom: 2em;
+}
+
+/* line 63, ../sass/layout/_global.scss */
+button {
+  border: 0;
+  background: transparent;
 }
 
 /* line 1, ../sass/layout/_header.scss */
@@ -736,37 +742,44 @@ header nav {
   text-align: right;
   margin-bottom: 4em;
 }
-/* line 22, ../sass/layout/_navigation.scss */
+/* line 21, ../sass/layout/_navigation.scss */
 header nav li {
   margin-right: 0.5em;
 }
-/* line 24, ../sass/layout/_navigation.scss */
+/* line 23, ../sass/layout/_navigation.scss */
 header nav li:last-child {
   margin-right: 0;
 }
-/* line 28, ../sass/layout/_navigation.scss */
+/* line 27, ../sass/layout/_navigation.scss */
 header nav a {
   padding: 0.25em 0.3em;
   font-size: 0.875em;
+  -webkit-transition-property: border-color color;
+  transition-property: border-color color;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  border-bottom: 1px solid #efefef;
 }
-/* line 36, ../sass/layout/_navigation.scss */
+/* line 37, ../sass/layout/_navigation.scss */
 header nav a:hover, header nav a:active, header nav a.current {
   color: #3e3633;
   border-bottom: 1px solid #3e3633;
 }
-/* line 49, ../sass/layout/_navigation.scss */
+/* line 47, ../sass/layout/_navigation.scss */
 footer nav li {
   margin-right: 0.75em;
 }
-/* line 51, ../sass/layout/_navigation.scss */
+/* line 49, ../sass/layout/_navigation.scss */
 footer nav li:last-child {
   margin-right: 0;
 }
-/* line 55, ../sass/layout/_navigation.scss */
+/* line 53, ../sass/layout/_navigation.scss */
 footer nav a {
   color: #efefef;
 }
-/* line 57, ../sass/layout/_navigation.scss */
+/* line 55, ../sass/layout/_navigation.scss */
 footer nav a:hover, footer nav a:active {
   color: #3e3633;
   text-decoration: none;
@@ -863,9 +876,101 @@ footer nav a:hover, footer nav a:active {
 .page-about section[role="main"] > p {
   margin-bottom: 1em;
 }
+/* line 6, ../sass/layout/_about.scss */
+.page-about section[role="main"] > p:last-of-type {
+  margin-bottom: 3em;
+}
 
-/* line 8, ../sass/layout/_about.scss */
-img[src*="folder"] {
+/* line 12, ../sass/layout/_about.scss */
+.cv {
+  margin-bottom: 3em;
+}
+/* line 14, ../sass/layout/_about.scss */
+.cv a {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
   display: block;
-  margin: 20px auto 50px;
+}
+/* line 19, ../sass/layout/_about.scss */
+.cv a img, .cv a p {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 23, ../sass/layout/_about.scss */
+.cv a img {
+  margin-right: 2%;
+  width: 40%;
+}
+/* line 27, ../sass/layout/_about.scss */
+.cv a p {
+  color: #1b3b68;
+  font-size: 1.5em;
+  line-height: 1.2;
+  width: 50%;
+}
+
+/* line 36, ../sass/layout/_about.scss */
+.extra-info {
+  clear: both;
+  text-align: center;
+  position: relative;
+}
+/* line 40, ../sass/layout/_about.scss */
+.extra-info button {
+  color: rgba(120, 111, 107, 0.5);
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  transition: 0.4s color;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 47, ../sass/layout/_about.scss */
+.extra-info button:active, .extra-info button:hover {
+  color: #3e3633;
+}
+/* line 54, ../sass/layout/_about.scss */
+.extra-info .bubble {
+  background-color: #786f6b;
+  color: #efefef;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 4em;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0.1875em 0.375em rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0.1875em 0.375em rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0.1875em 0.375em rgba(0, 0, 0, 0.3);
+}
+/* line 66, ../sass/layout/_about.scss */
+.extra-info .bubble:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-width: 12px 7px;
+  border-color: transparent transparent #5d5653 transparent;
+  border-style: solid;
+  top: -24px;
+  left: 50%;
+  margin-left: -28px;
+}
+/* line 77, ../sass/layout/_about.scss */
+.extra-info .bubble h3 {
+  font-family: "Andada", georgia, serif;
+  font-size: 1em;
+  width: 80%;
+  margin: 0 auto 1em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid rgba(239, 239, 239, 0.3);
+}
+/* line 85, ../sass/layout/_about.scss */
+.extra-info .bubble ul {
+  text-align: left;
+  font-size: 0.875em;
+  margin-bottom: 1em;
+}
+/* line 92, ../sass/layout/_about.scss */
+.extra-info .about-this-site:before {
+  margin-left: 13px;
 }

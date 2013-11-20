@@ -28,7 +28,7 @@ $template = $config->urls->templates;
 
             <?php include("./menu.php"); ?>
 
-            <?php if($page->get("name") !='home'): ?>
+            <?php if($page->get("name") != 'home'): ?>
                 <h2><?= $page->title ?></h2>
             <?php endif; ?>
 
