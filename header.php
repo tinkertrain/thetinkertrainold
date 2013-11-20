@@ -18,6 +18,7 @@ $template = $config->urls->templates;
             <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <?php endif; ?>
         <!--<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>-->
+
     </head>
     <body class="page-<?= $page->get("name") ?>">
         <!--[if lt IE 8]>
@@ -26,5 +27,6 @@ $template = $config->urls->templates;
         <header role="banner">
             <?php include("./menu.php"); ?>
             <h1><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
+            <h2 id="header-<?= $page->title ?>"><?= $page->title ?></h2>
         </header>
 

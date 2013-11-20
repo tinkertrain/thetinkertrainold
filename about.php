@@ -8,8 +8,6 @@
 include("./header.php");
 ?>
 <section role="main">
-  <h1 id="header-about"><?= $page->title ?></h1>
-
   <?= $page->body; ?>
 
   <div class="cv">
