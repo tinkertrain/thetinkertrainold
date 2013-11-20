@@ -2,25 +2,35 @@ header {
 	margin-bottom: 4em;
 	text-align: center;
 	h1 {
-		color: $brown-dark;
+		font-size: 300%;
 		line-height: 1;
-		font-size: 2.65em;
-		position: relative;
-		display: inline;
-		@include breakpoint($pit-stop-1) {
-		    font-size: 4em;
-		}
-		@include breakpoint($pit-stop-2) {
-		    font-size: em(72);
-		  }
-		span {
-			text-align: left;
-			color: $brown-light;
-			display: block;
-			font-size: 0.625em;
-			position: absolute;
-			left: 0;
-			top:  -0.7em;
-		}
+		color: $brown-dark;
 	}
+	.prefix {
+		display: block;
+		text-align: left;
+		color: $brown-light;
+		font-size: 0.625em;
+	}
+
+}
+.slabtexted .slabtext
+{
+	display:-moz-inline-box;
+	display:inline-block;
+	white-space:nowrap;
+}
+.slabtextinactive .slabtext
+{
+	display:inline;
+	white-space:normal;
+	font-size:1em !important;
+	letter-spacing:inherit !important;
+	word-spacing:inherit !important;
+	*letter-spacing:0 !important;
+	*word-spacing:0 !important;
+}
+.slabtextdone .slabtext
+{
+	display:block;
 }

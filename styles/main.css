@@ -552,20 +552,21 @@ ul {
 a {
   text-decoration: none;
   color: #786f6b;
+  transition: all 0.4s;
 }
-/* line 28, ../sass/layout/_global.scss */
+/* line 29, ../sass/layout/_global.scss */
 a:hover, a:active {
-  text-decoration: underline;
+  color: #3e3633;
 }
 
-/* line 35, ../sass/layout/_global.scss */
+/* line 36, ../sass/layout/_global.scss */
 h1, h2, h3, h4 {
   font-family: "trackregular", georgia, serif;
   margin: 0;
   font-weight: normal;
 }
 
-/* line 44, ../sass/layout/_global.scss */
+/* line 45, ../sass/layout/_global.scss */
 header, footer, section[role="main"] {
   min-width: 400px;
   max-width: 960px;
@@ -575,7 +576,7 @@ header, footer, section[role="main"] {
   margin-right: auto;
 }
 
-/* line 53, ../sass/layout/_global.scss */
+/* line 54, ../sass/layout/_global.scss */
 section[role="main"] {
   margin-bottom: 2em;
 }
@@ -587,33 +588,39 @@ header {
 }
 /* line 4, ../sass/layout/_header.scss */
 header h1 {
-  color: #3e3633;
+  font-size: 300%;
   line-height: 1;
-  font-size: 2.65em;
-  position: relative;
-  display: inline;
+  color: #3e3633;
 }
-@media (min-width: 34.375em) {
-  /* line 4, ../sass/layout/_header.scss */
-  header h1 {
-    font-size: 4em;
-  }
-}
-@media (min-width: 43.75em) {
-  /* line 4, ../sass/layout/_header.scss */
-  header h1 {
-    font-size: 4.5em;
-  }
-}
-/* line 16, ../sass/layout/_header.scss */
-header h1 span {
+/* line 9, ../sass/layout/_header.scss */
+header .prefix {
+  display: block;
   text-align: left;
   color: #786f6b;
-  display: block;
   font-size: 0.625em;
-  position: absolute;
-  left: 0;
-  top: -0.7em;
+}
+
+/* line 17, ../sass/layout/_header.scss */
+.slabtexted .slabtext {
+  display: -moz-inline-box;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* line 23, ../sass/layout/_header.scss */
+.slabtextinactive .slabtext {
+  display: inline;
+  white-space: normal;
+  font-size: 1em !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+  *letter-spacing: 0 !important;
+  *word-spacing: 0 !important;
+}
+
+/* line 33, ../sass/layout/_header.scss */
+.slabtextdone .slabtext {
+  display: block;
 }
 
 /* line 1, ../sass/layout/_footer.scss */
@@ -656,7 +663,7 @@ header nav {
 }
 /* line 20, ../sass/layout/_navigation.scss */
 header nav li {
-  margin-right: 0.5em;
+  margin-right: 0.25em;
 }
 /* line 22, ../sass/layout/_navigation.scss */
 header nav li:last-child {
@@ -664,21 +671,26 @@ header nav li:last-child {
 }
 /* line 26, ../sass/layout/_navigation.scss */
 header nav a {
+  padding: 0.25em 0.3em;
   font-size: 0.875em;
 }
-/* line 34, ../sass/layout/_navigation.scss */
-footer nav li {
-  margin-right: 0.5em;
+/* line 29, ../sass/layout/_navigation.scss */
+header nav a:hover, header nav a:active {
+  background-color: rgba(120, 111, 107, 0.2);
 }
-/* line 36, ../sass/layout/_navigation.scss */
+/* line 38, ../sass/layout/_navigation.scss */
+footer nav li {
+  margin-right: 0.75em;
+}
+/* line 40, ../sass/layout/_navigation.scss */
 footer nav li:last-child {
   margin-right: 0;
 }
-/* line 40, ../sass/layout/_navigation.scss */
+/* line 44, ../sass/layout/_navigation.scss */
 footer nav a {
   color: #efefef;
 }
-/* line 42, ../sass/layout/_navigation.scss */
+/* line 46, ../sass/layout/_navigation.scss */
 footer nav a:hover, footer nav a:active {
   color: #3e3633;
   text-decoration: none;

@@ -6,7 +6,16 @@
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+        <script src="/site/templates/bower_components/slabText/js/jquery.slabtext.js"></script>
+        <script>
+            (function() {
+              // Function to slabtext the H1 headings
+                $("h1").slabText({
+                        // Don't slabtext the headers if the viewport is under 380px
+                        "viewportBreakpoint":380
+                    });
+            })();
+        </script>
         <?php if($page->get("name") == "work") :?>
             <script src="/site/templates/scripts/main-min.js"></script>
         <?php endif; ?>

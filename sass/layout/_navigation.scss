@@ -3,49 +3,53 @@
    ========================================================================== */
 
 nav {
-	ul {
-		list-style: none;
-		padding: 0;
-		li {
-			display: inline-block;
-		}
-	}
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      display: inline-block;
+    }
+  }
 
-	// Header nav
-	// ---------------------------------
-	header & {
-		font-family: $track;
-		text-align: right;
-		margin-bottom: 4em;
-		li {
-			margin-right: 0.5em;
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-		a {
-			font-size: em(14);
-		}
-	}
+  // Header nav
+  // ---------------------------------
+  header & {
+    font-family: $track;
+    text-align: right;
+    margin-bottom: 4em;
+    li {
+      margin-right: 0.25em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      padding: 0.25em 0.3em;
+      font-size: em(14);
+      &:hover, &:active {
+        background-color: rgba($brown-light, 0.2);
+      }
+    }
+  }
 
-	// Footer nav
-	// ---------------------------------
-	footer & {
-		li {
-			margin-right: 0.5em;
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-		a {
-			color: $bg;
-			&:hover, &:active {
-				color: $brown-dark;
-				text-decoration: none;
-			}
-			span {
-				@extend %ir;
-			}
-		}
-	}
+  // Footer nav
+  // ---------------------------------
+  footer & {
+    li {
+      margin-right: 0.75em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      color: $bg;
+      &:hover, &:active {
+        color: $brown-dark;
+        text-decoration: none;
+      }
+      span {
+        @extend %ir;
+      }
+    }
+  }
 }

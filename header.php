@@ -25,5 +25,6 @@ $template = $config->urls->templates;
         <![endif]-->
         <header role="banner">
             <?php include("./menu.php"); ?>
-            <h1><span>The</span>Tinkertrain</h1>
+            <h1><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
         </header>
+
