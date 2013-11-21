@@ -22,7 +22,7 @@ $testing = false;
     $demo = $page->projects[$projectReceived]->project_demo;
    ?>
 
-<div class="project-detail">
+<div class="project-detail project-<?= $projectReceived + 1 ?>">
   <button class="close">&times;</button>
   <section class="details">
     <h2>Project</h2>
@@ -49,7 +49,7 @@ $testing = false;
       <h2>Tech</h2>
       <div><?= $tech ?></div>
     </section>
-    <?php if($screenshots): ?>
+    <?php if(count($screenshots) > 0): ?>
       <section class="screenshots">
         <h2>Screenshots</h2>
         <ul>
