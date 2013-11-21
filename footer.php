@@ -14,7 +14,7 @@
         <script src="/site/templates/scripts/main-min.js"></script>
 
         <?php if($page->get("name") == "work") :?>
-            echo "work";
+            <script src="/site/templates/scripts/work.js"></script>
         <?php endif; ?>
 
         <?php if($page->get("name") == "blog") :?>
