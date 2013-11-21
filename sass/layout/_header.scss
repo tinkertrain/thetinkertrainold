@@ -55,6 +55,34 @@ header {
         }
       }
     }
+    .page-work &.page {
+      h1 {
+        width: 100%;
+        margin: 0;
+      }
+      h2 {
+        @include transform(rotate(0deg));
+        position: relative;
+        bottom: 0;
+        left: -500px;
+        margin-left: -57px;
+        margin-top: -0.25em;
+        font-size: 2em;
+        width: auto;
+        display: inline-block;
+        -webkit-transition-property: left;
+        transition-property: left;
+        -webkit-transition-duration: 1s;
+        transition-duration: 1s;
+        -webkit-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        &.animated {
+          left: 50%;
+        }
+      }
+    }
   }
 }
 .slabtexted .slabtext
