@@ -1,6 +1,7 @@
 (function() {
 	'use strict';
 	var TrainLine = function() {
+		this.$section = $('section[role="main"]');
 		this.$projects = $('.projects');
 		this.projectNumber = $('.project').length;
 		this.$buttons = $('.train-line button');
@@ -54,26 +55,36 @@
 				}
 				else {
 					$('.' + projectClass ).fadeIn();
+					$('.overlay').fadeIn();
 				}
 			});
 		};
 
 		this.fetchProject = function (projectId) {
-
+			var _this = this;
 			$.ajax({
 				url: document.URL,
 				type: 'POST',
 				data: { projectId: projectId }
 			}).done(function (results) {
-				$('section[role="main"]').append(results);
+
+				if( $('.overlay').length === 0 ) {
+					$('body').append('<div class="overlay"></div>');
+				}
+				else {
+					$('.overlay').fadeIn();
+				}
+
+				_this.$section.append(results);
 			});
 
 		};
 
 		this.closeDetails = function () {
-			$('section[role="main"]').on('click', '.close', function (e) {
+			this.$section.on('click', '.close', function (e) {
 				e.preventDefault();
 				$(this).parent().fadeOut();
+				$('.overlay').fadeOut();
 			});
 		};
 
