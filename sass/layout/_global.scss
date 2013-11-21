@@ -18,6 +18,8 @@ body {
 p {
   margin: 0 auto;
   max-width: 600px;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 ul {
