@@ -121,7 +121,7 @@
       families: ['trackregular', 'trackitalic', 'thetinke']
     },
     loading: function() {
-      $("header h1, header h2").slabText({
+      $("header h1, .getBig").slabText({
         "viewportBreakpoint":380
       });
     }
