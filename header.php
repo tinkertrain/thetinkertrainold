@@ -28,12 +28,15 @@ $template = $config->urls->templates;
 
             <?php include("./menu.php"); ?>
 
-            <?php if($page->get("name") != 'home'): ?>
-                <h2><?= $page->title ?></h2>
+            <?php if($page->get("name") == 'about'): ?>
+                <h2 class='getBig'><?= $page->title ?></h2>
             <?php endif; ?>
 
             <h1><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
 
+            <?php if($page->get("name") == 'work'): ?>
+                <h2><?= $page->title ?></h2>
+            <?php endif; ?>
 
 
         </header>
