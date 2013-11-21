@@ -111,7 +111,7 @@
 // });
 
 (function() {
-
+  'use strict';
   //Load fonts
   WebFont.load({
     google: {
