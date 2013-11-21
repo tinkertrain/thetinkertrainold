@@ -4,11 +4,13 @@
 		this.$projects = $('.projects');
 		this.projectNumber = $('.project').length;
 		this.$buttons = $('.train-line button');
+		this.$project = $('.project');
 		this.counter = 1;
 
 		this.initialize = function () {
 			this.setProjectsWidth();
 			this.moveTheLine();
+			this.getProjectDetails();
 		};
 
 		this.setProjectsWidth = function () {
@@ -39,6 +41,28 @@
 					this.counter = this.counter - 1;
 				}
 			}
+		};
+
+		this.getProjectDetails = function () {
+			var _this = this;
+			_this.$project.on('click', 'div', function () {
+				var projectClass = $(this).attr('class');
+				var projectId = parseInt(projectClass.match(/(\d+)$/)[0], 10) - 1;
+
+				_this.fetchProject(projectId);
+			});
+		};
+
+		this.fetchProject = function (projectId) {
+
+			$.ajax({
+				url: document.URL,
+				type: 'POST',
+				data: { projectId: projectId }
+			}).done(function (results) {
+				$('section[role="main"]').append(results);
+			});
+
 		};
 
 		// Initialize
