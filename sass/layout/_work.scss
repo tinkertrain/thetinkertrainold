@@ -58,7 +58,9 @@
       padding-top: 50px;
       cursor: pointer;
       transition: -webkit-transform 0.5s;
-      @include sheet;
+      background-color: #E7E6E6;
+      border: 1px solid #CDCCCC;
+      border-radius: 3px;
       &:hover, &:active {
         -webkit-transform: translateY(-20px);
       }
@@ -76,11 +78,9 @@
   }
 
 .project-detail{
-  // @include sheet;
   background-color: #E7E6E6;
   border: 1px solid #CDCCCC;
   border-radius: 3px;
-  // box-shadow: 0 0 70px 50px rgba($brown-dark, 0.5);
   position: absolute;
   top: -10em;
   left: 50%;
@@ -88,6 +88,11 @@
   z-index: 10;
   width: 360px;
   padding: 2em 1.25em 0.5em;
+  @include breakpoint($pit-stop-1) {
+    width: 496px;
+    margin-left: -248px;
+    padding-top: 3em;
+  }
   p, ul {
     font-size: em(14);
   }
@@ -119,21 +124,75 @@
   }
   h2 {
     color: $blue;
+    @include breakpoint($pit-stop-1) {
+      font-size: em(32);
+    }
   }
   h3 {
     color: $blue-dark;
     font-size: em(16);
+    @include breakpoint($pit-stop-1) {
+      font-size: em(18);
+    }
     > a {
       color: $blue-dark;
     }
   }
 }
 .details {
+  & > div, h2, img {
+    @include breakpoint($pit-stop-1) {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  h2 {
+    @include breakpoint($pit-stop-1) {
+      width: 12%;
+      @include transform(rotate(-90deg) translatex(-120px) translateY(-10px));
+    }
+  }
   & > div {
-
+    @include breakpoint($pit-stop-1) {
+      width: 59%;
+      margin-right: 3%;
+    }
   }
   img {
     display: none;
+    @include breakpoint($pit-stop-1) {
+      width: 25%;
+      display: inline-block;
+      padding-top: 4em;
+    }
+  }
+}
+
+.involvement {
+  @include breakpoint($pit-stop-1) {
+    h2 {
+      text-align: right;
+    }
+    p:last-child {
+      margin-bottom: 3em;
+    }
+  }
+}
+
+.tech, .screenshots {
+  @include breakpoint($pit-stop-1) {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.tech {
+  @include breakpoint($pit-stop-1) {
+    width: 40%;
+    padding-right: 0.5em;
+    h2 {
+      margin-top: -0.3em;
+    }
   }
 }
 
@@ -145,7 +204,32 @@
   }
   li {
     display: inline-block;
-    border: 5px solid #999;
     margin: 0 15px 15px 0;
+  }
+  a {
+    display: block;
+    border: 5px solid #999;
+    width: 60px;
+    height: 60px;
+  }
+  @include breakpoint($pit-stop-1) {
+    width: 59%;
+    height: 300px;
+    h2, ul {
+      display: inline-block;
+      vertical-align: top;
+    }
+    h2 {
+      width: 12%;
+      @include transform(rotate(-90deg) translatex(-230px) translateY(-10px));
+    }
+    ul {
+      width: 83%;
+      margin-left: 3%;
+      margin-top: 0;
+    }
+    li {
+      margin: 0 10px 15px 0;
+    }
   }
 }
