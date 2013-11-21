@@ -1,5 +1,6 @@
 .page-work {
   section[role="main"] {
+    position: relative;
     > p {
       margin-bottom: 3em;
     }
@@ -17,10 +18,6 @@
     border: 1px dotted rgba($blue-light, 0);
     &:hover, &:active {
       color: $blue-dark;
-    }
-    &:focus {
-      outline: none;
-      border: 1px dotted rgba($blue-light, 0.8);
     }
   }
   .previous {
@@ -78,58 +75,77 @@
     }
   }
 
-.project-details{
-    display: none;
-    // @include sheet;
+.project-detail{
+  // @include sheet;
+  background-color: #E7E6E6;
+  border: 1px solid #CDCCCC;
+  border-radius: 3px;
+  // box-shadow: 0 0 70px 50px rgba($brown-dark, 0.5);
+  position: absolute;
+  top: -10em;
+  left: 50%;
+  margin-left: -180px;
+  z-index: 10;
+  width: 360px;
+  padding: 2em 1.25em 0.5em;
+  p, ul {
+    font-size: em(14);
+  }
+
+  ul {
+    padding-left: 1em;
+  }
+
+  section {
+    margin-bottom: 1.5em;
+  }
+  .close {
+    text-align: center;
+    display: block;
     position: absolute;
-    padding: 30px;
-    //min-height:  400px;
-    width: 300px;
-    top: -400px;
-    left:50%;
-    margin-left: -150px;
-    z-index: 500;
-    // box-shadow: 2px 2px 10px rgba($darkbrown, 0.3);
-    p{
-      font-size: 18px;
-      line-height: 1.5em;
-      span{
-        // color: $green;
-        font-weight: 700;
-        font-size: 24px;
-      }
-      span+span{
-        // color: $sepia;
-      }
-    }
-    .project-links{
-      margin: 20px auto 0;
-      width: 250px;
-    }
-    a{
-      // color: $lightbrown;
-      // font-family: $kreon;
-      font-size: 18px;
-      // background-color: $sepia;
-      display: inline-block;
-      padding: 5px 10px 5px 10px;
-      text-align: center;
-      width: 100px;
-      &[href*="http"]{
-        // background-color: $blue;
-        &:hover{
-          // background-color: darken($blue, 10%);
-        }
-      }
-      &:before{
-        margin-right: 5px;
-        margin-top: 3px;
-        font-size: 16px;
-      }
-      &:hover{
-        text-decoration: none;
-        // background-color: darken($sepia, 10%);
-        text-shadow: none;
-      }
+    top: 0.5em;
+    right: 0.5em;
+    background-color: #898989;
+    width: 25px;
+    height: 25px;
+    color: #E7E6E6;
+    border-radius: 50%;
+    font-size: em(22);
+    line-height: 10px;
+    padding-bottom: 6px;
+    &:hover, &:active {
+      background-color: rgba(#333, 0.8);
     }
   }
+  h2 {
+    color: $blue;
+  }
+  h3 {
+    color: $blue-dark;
+    font-size: em(16);
+    > a {
+      color: $blue-dark;
+    }
+  }
+}
+.details {
+  & > div {
+
+  }
+  img {
+    display: none;
+  }
+}
+
+.screenshots {
+  ul {
+    list-style: none;
+    margin: 1em 0 0 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    border: 5px solid #999;
+    margin: 0 15px 15px 0;
+  }
+}
