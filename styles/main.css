@@ -516,6 +516,159 @@ footer nav a span, .extra-info button span {
   color: transparent;
 }
 
+/* line 19, ../sass/base/_arrows.scss */
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+/* line 26, ../sass/base/_arrows.scss */
+.paginate {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 300;
+  position: absolute;
+  top: 40%;
+  -webkit-filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.2));
+}
+/* line 39, ../sass/base/_arrows.scss */
+.paginate i {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 30px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #7498c6;
+  transition: all 0.15s ease;
+}
+/* line 51, ../sass/base/_arrows.scss */
+.paginate.previous {
+  left: 0;
+}
+/* line 54, ../sass/base/_arrows.scss */
+.paginate.previous i {
+  -webkit-transform-origin: 0% 50%;
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.previous i:first-child {
+  -webkit-transform: translate(0, -1px) rotate(40deg);
+  transform: translate(0, -1px) rotate(40deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.previous i:last-child {
+  -webkit-transform: translate(0, 1px) rotate(-40deg);
+  transform: translate(0, 1px) rotate(-40deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.previous:hover i:first-child {
+  -webkit-transform: translate(0, -1px) rotate(30deg);
+  transform: translate(0, -1px) rotate(30deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.previous:hover i:last-child {
+  -webkit-transform: translate(0, 1px) rotate(-30deg);
+  transform: translate(0, 1px) rotate(-30deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.previous:active i:first-child {
+  -webkit-transform: translate(1px, -1px) rotate(25deg);
+  transform: translate(1px, -1px) rotate(25deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.previous:active i:last-child {
+  -webkit-transform: translate(1px, 1px) rotate(-25deg);
+  transform: translate(1px, 1px) rotate(-25deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.previous[data-state=disabled] i:first-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.previous[data-state=disabled] i:last-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.previous[data-state=disabled]:hover i:first-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.previous[data-state=disabled]:hover i:last-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 77, ../sass/base/_arrows.scss */
+.paginate.next {
+  right: 0;
+}
+/* line 80, ../sass/base/_arrows.scss */
+.paginate.next i {
+  -webkit-transform-origin: 100% 50%;
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.next i:first-child {
+  -webkit-transform: translate(0, 1px) rotate(40deg);
+  transform: translate(0, 1px) rotate(40deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.next i:last-child {
+  -webkit-transform: translate(0, -1px) rotate(-40deg);
+  transform: translate(0, -1px) rotate(-40deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.next:hover i:first-child {
+  -webkit-transform: translate(0, 1px) rotate(30deg);
+  transform: translate(0, 1px) rotate(30deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.next:hover i:last-child {
+  -webkit-transform: translate(0, -1px) rotate(-30deg);
+  transform: translate(0, -1px) rotate(-30deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.next:active i:first-child {
+  -webkit-transform: translate(1px, 1px) rotate(25deg);
+  transform: translate(1px, 1px) rotate(25deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.next:active i:last-child {
+  -webkit-transform: translate(1px, -1px) rotate(-25deg);
+  transform: translate(1px, -1px) rotate(-25deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.next[data-state=disabled] i:first-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.next[data-state=disabled] i:last-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 8, ../sass/base/_arrows.scss */
+.paginate.next[data-state=disabled]:hover i:first-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 13, ../sass/base/_arrows.scss */
+.paginate.next[data-state=disabled]:hover i:last-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 103, ../sass/base/_arrows.scss */
+.paginate[data-state=disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+
 /* ==========================================================================
    LAYOUT
    ========================================================================== */
@@ -1044,26 +1197,6 @@ footer nav a:hover, footer nav a:active {
   margin-bottom: 4em;
   position: relative;
 }
-/* line 13, ../sass/layout/_work.scss */
-.train-line .previous, .train-line .next {
-  color: #7498c6;
-  transition: color 0.4s;
-  font-size: 0.75em;
-  font-family: "trackitalic", georgia, serif;
-  border: 1px dotted rgba(116, 152, 198, 0);
-}
-/* line 19, ../sass/layout/_work.scss */
-.train-line .previous:hover, .train-line .previous:active, .train-line .next:hover, .train-line .next:active {
-  color: #1b3b68;
-}
-/* line 23, ../sass/layout/_work.scss */
-.train-line .previous {
-  float: left;
-}
-/* line 26, ../sass/layout/_work.scss */
-.train-line .next {
-  float: right;
-}
 
 /* line 31, ../sass/layout/_work.scss */
 .projects {
@@ -1125,8 +1258,8 @@ footer nav a:hover, footer nav a:active {
   background-color: #E7E6E6;
   border: 1px solid #CDCCCC;
   border-radius: 3px;
-  position: absolute;
-  top: -15em;
+  position: fixed;
+  top: 15%;
   left: 50%;
   margin-left: -180px;
   z-index: 10;

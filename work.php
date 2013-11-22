@@ -81,8 +81,8 @@ $testing = false;
 
 <div class="train-line">
 
-  <button class="previous">&lsaquo; Previous</button>
-  <button class="next">Next &rsaquo;</button>
+  <button class="paginate previous"><i></i><i></i></button>
+  <button class="paginate next"><i></i><i></i></button>
 
   <ul class="projects">
     <?php $i = 1; ?>
