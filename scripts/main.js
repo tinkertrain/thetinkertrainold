@@ -121,8 +121,10 @@
       families: ['trackregular', 'trackitalic', 'thetinke']
     },
     loading: function() {
-      $("header h1, .getBig").slabText({
-        "viewportBreakpoint":380
+      $('header h1, .getBig').slabText({
+        viewportBreakpoint: 380,
+        maxFontSize: 115,
+        postTweak: false
       });
     }
   });
