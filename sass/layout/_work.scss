@@ -40,12 +40,12 @@
       margin: 0 auto;
       padding-top: 50px;
       cursor: pointer;
-      transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
       background-color: #E7E6E6;
       border: 1px solid #CDCCCC;
       border-radius: 3px;
       &:hover, &:active {
-        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
       }
     }
     &:after {
@@ -122,12 +122,14 @@
     }
     > a {
       color: $blue-dark;
-      &:after {
-        content: "\e609";
-        font-family: 'thetinke';
-        margin-left: 0.75em;
-        font-size: em(10);
-        vertical-align: top;
+      .fontface & {
+        &:after {
+          content: "\e609";
+          font-family: 'thetinke';
+          margin-left: 0.75em;
+          font-size: em(10);
+          vertical-align: top;
+        }
       }
     }
   }
@@ -148,7 +150,7 @@
       @include breakpoint($pit-stop-1) {
         .csstransforms & {
           width: 12%;
-          @include transform(rotate(-90deg) translatex(-120px) translateY(-10px));
+          transform: rotate(-90deg) translatex(-120px) translateY(-10px);
         }
       }
     }
@@ -234,7 +236,7 @@
         vertical-align: top;
       }
       h2 {
-        @include transform(rotate(-90deg) translatex(-230px) translateY(-10px));
+        transform: rotate(-90deg) translatex(-230px) translateY(-10px);
         width: 12%;
       }
       ul {

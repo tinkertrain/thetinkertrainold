@@ -38,6 +38,5 @@ $template = $config->urls->templates;
                 <h2><?= $page->title ?></h2>
             <?php endif; ?>
 
-
         </header>
 

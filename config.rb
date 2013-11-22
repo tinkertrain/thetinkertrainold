@@ -12,6 +12,7 @@ fonts_dir = "fonts"
 output_style = :expanded
 line_comments = true
 environment = :development
+disable_warnings = true
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true

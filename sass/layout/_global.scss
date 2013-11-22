@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+ }
+
 html {
   background-color: $brown-light;
   font-size: 16px;
