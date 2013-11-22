@@ -10,23 +10,6 @@
   overflow: hidden;
   margin-bottom: 4em;
   position: relative;
-  // padding-top: 3em;
-  // .previous, .next {
-  //   color: $blue-light;
-  //   transition: color 0.4s;
-  //   font-size: em(12);
-  //   font-family: $trackItalic;
-  //   border: 1px dotted rgba($blue-light, 0);
-  //   &:hover, &:active {
-  //     color: $blue-dark;
-  //   }
-  // }
-  // .previous {
-  //   float: left;
-  // }
-  // .next {
-  //   float: right;
-  // }
 }
 .projects {
   clear: both;
@@ -77,31 +60,33 @@
     }
   }
 
-.project-detail{
+.project-detail {
   background-color: #E7E6E6;
   border: 1px solid #CDCCCC;
   border-radius: 3px;
   position: fixed;
-  top: 15%;
+  top: 7%;
   left: 50%;
   margin-left: -180px;
-  z-index: 10;
+  z-index: 302;
   width: 360px;
   padding: 2em 1.25em 0.5em;
-  z-index: 200;
+  .csstransforms & {
+    top: 15%;
+  }
   @include breakpoint($pit-stop-1) {
     width: 496px;
     margin-left: -248px;
-    padding-top: 3em;
+    .csstransforms & {
+      padding-top: 3em;
+    }
   }
   p, ul {
     font-size: em(14);
   }
-
   ul {
     padding-left: 1em;
   }
-
   section {
     margin-bottom: 1.5em;
   }
@@ -137,12 +122,21 @@
     }
     > a {
       color: $blue-dark;
+      &:after {
+        content: "\e609";
+        font-family: 'thetinke';
+        margin-left: 0.75em;
+        font-size: em(10);
+        vertical-align: top;
+      }
     }
   }
 }
 .details {
   @include breakpoint($pit-stop-1) {
-    min-height: 180px;
+    .csstransforms & {
+      min-height: 180px;
+    }
   }
   & > div, h2, img {
     @include breakpoint($pit-stop-1) {
@@ -151,51 +145,66 @@
     }
   }
   h2 {
+      @include breakpoint($pit-stop-1) {
+        .csstransforms & {
+          width: 12%;
+          @include transform(rotate(-90deg) translatex(-120px) translateY(-10px));
+        }
+      }
+    }
+  & > div:first-of-type {
     @include breakpoint($pit-stop-1) {
-      width: 12%;
-      @include transform(rotate(-90deg) translatex(-120px) translateY(-10px));
+       .csstransforms & {
+        width: 59%;
+        margin-right: 3%;
+      }
+      width: 68%;
+      margin-right: 5%;
     }
   }
-  & > div {
-    @include breakpoint($pit-stop-1) {
-      width: 59%;
-      margin-right: 3%;
-    }
-  }
-  img {
-    display: none;
+  .project-logo {
     @include breakpoint($pit-stop-1) {
       width: 25%;
       display: inline-block;
-      padding-top: 4em;
+      padding-top: 10%;
+      img {
+        width: 100%;
+      }
     }
+    display: none;
   }
 }
 
 .involvement {
-  @include breakpoint($pit-stop-1) {
-    h2 {
-      text-align: right;
-    }
-    p:last-child {
-      margin-bottom: 3em;
+  .csstransforms & {
+    @include breakpoint($pit-stop-1) {
+      h2 {
+        text-align: right;
+      }
+      p:last-child {
+        margin-bottom: 3em;
+      }
     }
   }
 }
 
 .tech, .screenshots {
-  @include breakpoint($pit-stop-1) {
-    display: inline-block;
-    vertical-align: top;
+  .csstransforms & {
+    @include breakpoint($pit-stop-1) {
+      display: inline-block;
+      vertical-align: top;
+    }
   }
 }
 
 .tech {
-  @include breakpoint($pit-stop-1) {
-    width: 40%;
-    padding-right: 0.5em;
-    h2 {
-      margin-top: -0.3em;
+  .csstransforms & {
+    @include breakpoint($pit-stop-1) {
+      width: 40%;
+      padding-right: 0.5em;
+      h2 {
+        margin-top: -0.3em;
+      }
     }
   }
 }
@@ -218,19 +227,21 @@
   }
   @include breakpoint($pit-stop-1) {
     width: 59%;
-    height: 300px;
-    h2, ul {
-      display: inline-block;
-      vertical-align: top;
-    }
-    h2 {
-      width: 12%;
-      @include transform(rotate(-90deg) translatex(-230px) translateY(-10px));
-    }
-    ul {
-      width: 83%;
-      margin-left: 3%;
-      margin-top: 0;
+    .csstransforms & {
+      height: 300px;
+      h2, ul {
+        display: inline-block;
+        vertical-align: top;
+      }
+      h2 {
+        @include transform(rotate(-90deg) translatex(-230px) translateY(-10px));
+        width: 12%;
+      }
+      ul {
+        width: 83%;
+        margin-left: 3%;
+        margin-top: 0;
+      }
     }
     li {
       margin: 0 10px 15px 0;
@@ -244,7 +255,7 @@
   height: 100%;
   background-color: rgba($brown-dark, 0.8);
   position: fixed;
-  z-index: 100;
+  z-index: 301;
   top: 0;
   left: 0;
 }

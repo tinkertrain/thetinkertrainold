@@ -17,7 +17,7 @@ $template = $config->urls->templates;
         <?php if($page->get("name") == "blog"): ?>
             <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <?php endif; ?>
-        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
     </head>
     <body class="page-<?= $page->get("name") ?>">

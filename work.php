@@ -36,7 +36,9 @@ $testing = false;
       </h3>
       <p><?= $details ?></p>
     </div><!--
-    --><img src="<?= $logo->url ?>" alt="Project logo">
+    --><div class="project-logo">
+      <img src="<?= $logo->url ?>" alt="Project logo">
+    </div>
   </section>
 
   <section class="involvement">

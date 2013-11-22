@@ -5,12 +5,19 @@ header {
     font-size: 300%;
     line-height: 1;
     color: $brown-dark;
+    text-align: center;
   }
   .prefix {
     display: block;
     text-align: left;
     color: $brown-light;
     font-size: 0.625em;
+    @include breakpoint($pit-stop-4) {
+      text-indent: 2%;
+    }
+    @include breakpoint($pit-stop-5) {
+      text-indent: 5%;
+    }
   }
   &.page  {
     h1 {
@@ -19,6 +26,7 @@ header {
       transition-property: font-size;
       transition-duration: 0.1s;
       transition-timing-function: ease-in-out;
+      text-align: left;
     }
     h2 {
       @include transform(rotate(600deg));
