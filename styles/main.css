@@ -780,7 +780,7 @@ header .prefix {
 @media (min-width: 58.125em) {
   /* line 10, ../sass/layout/_header.scss */
   header .prefix {
-    text-indent: 5%;
+    text-indent: 7%;
   }
 }
 /* line 23, ../sass/layout/_header.scss */
@@ -853,11 +853,16 @@ header.page h2.animated {
   }
 }
 /* line 67, ../sass/layout/_header.scss */
+.page-about header.page.page .prefix {
+  text-indent: 0;
+}
+/* line 72, ../sass/layout/_header.scss */
 .page-work header.page.page h1 {
   width: 100%;
   margin: 0;
+  text-align: center;
 }
-/* line 71, ../sass/layout/_header.scss */
+/* line 77, ../sass/layout/_header.scss */
 .page-work header.page.page h2 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -881,18 +886,18 @@ header.page h2.animated {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 89, ../sass/layout/_header.scss */
+/* line 95, ../sass/layout/_header.scss */
 .page-work header.page.page h2.animated {
   left: 50%;
 }
 
-/* line 96, ../sass/layout/_header.scss */
+/* line 102, ../sass/layout/_header.scss */
 .slabtexted .slabtext {
   display: inline-block;
   white-space: nowrap;
 }
 
-/* line 101, ../sass/layout/_header.scss */
+/* line 107, ../sass/layout/_header.scss */
 .slabtextinactive .slabtext {
   display: inline;
   white-space: normal;
@@ -903,7 +908,7 @@ header.page h2.animated {
   *word-spacing: 0 !important;
 }
 
-/* line 111, ../sass/layout/_header.scss */
+/* line 117, ../sass/layout/_header.scss */
 .slabtextdone .slabtext {
   display: block;
 }

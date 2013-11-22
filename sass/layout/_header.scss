@@ -16,7 +16,7 @@ header {
       text-indent: 2%;
     }
     @include breakpoint($pit-stop-5) {
-      text-indent: 5%;
+      text-indent: 7%;
     }
   }
   &.page  {
@@ -63,10 +63,16 @@ header {
         }
       }
     }
+    .page-about &.page {
+      .prefix {
+        text-indent: 0;
+      }
+    }
     .page-work &.page {
       h1 {
         width: 100%;
         margin: 0;
+        text-align: center;
       }
       h2 {
         @include transform(rotate(0deg));
