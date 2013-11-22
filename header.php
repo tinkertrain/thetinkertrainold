@@ -32,7 +32,11 @@ $template = $config->urls->templates;
                 <h2 class='getBig'><?= $page->title ?></h2>
             <?php endif; ?>
 
-            <h1><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
+            <?php if($page->get("name") == 'blog'): ?>
+                <img class="blog-logo" src="/site/templates/images/mrtinker.svg" alt="The Tinkertrain pixelated illustration">
+            <?php else: ?>
+                <h1><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
+            <?php endif; ?>
 
             <?php if($page->get("name") == 'work'): ?>
                 <h2><?= $page->title ?></h2>

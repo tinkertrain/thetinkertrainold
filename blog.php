@@ -8,22 +8,12 @@
 include("./header.php");
 ?>
 
-<div class="row">
-	<div class="offset10 span2">
+	<section role="main">
 		<div class="switcher">
-			<button class="day">Toggle Day/Night</button>
+			<button class="day"><span>Toggle Day/Night</span></button>
 			<button class="serif">F</button>
 		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="span12">
-		<div class="mrtinker-blog">
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="span12">
+
 		<?php
 			$articles = $page->children("id>1, limit=3");
 			$pagination = $articles->renderPager(array(
@@ -44,13 +34,6 @@ include("./header.php");
         }
         echo $pagination;
 		 ?>
-	</div>
-</div>
-<div class="row">
-	<div class="span12">
-		<div class="portfolio-link">
-			<a href="/">Portfolio</a>
-		</div>
-	</div>
-</div>
+	</section>
+
 <?php include("./footer.php") ?>

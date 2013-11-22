@@ -1,30 +1,34 @@
 (function () {
 	var Switcher = function(el){
-		var that = this;
-		this.el = el;
+		var _this = this;
+		this.$el = $(el);
 		this.body = $('.page-blog');
-		this.dayNight = $(el).children('.day');
-		this.serifSans = $(el).children('.serif');
+		this.$blogLogo = $('.blog-logo');
+
 		this.switchDayNight = function(){
-			that.dayNight.on('click', function(){
-				if(that.body.hasClass('blog-night')){
-					that.body.removeClass('blog-night');
+			this.$el.on('click', '.day', function(){
+				if(_this.body.hasClass('blog-night')){
+					_this.body.removeClass('blog-night');
+					_this.$blogLogo.attr('src', '/site/templates/images/mrtinker.svg');
 				}
 				else{
-					that.body.addClass('blog-night');
+					_this.body.addClass('blog-night');
+					_this.$blogLogo.attr('src', '/site/templates/images/mrtinker-dark.svg');
 				}
 			});
 		};
+
 		this.switchSerifSans = function(){
-			that.serifSans.on('click', function(){
-				if(that.body.hasClass('blog-sans')){
-					that.body.removeClass('blog-sans');
+			this.$el.on('click', '.serif', function(){
+				if(_this.body.hasClass('blog-sans')){
+					_this.body.removeClass('blog-sans');
 				}
 				else{
-					that.body.addClass('blog-sans');
+					_this.body.addClass('blog-sans');
 				}
 			});
 		};
+
 		this.switchDayNight();
 		this.switchSerifSans();
 	};

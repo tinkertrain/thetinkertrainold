@@ -14,11 +14,11 @@
         <script src="/site/templates/scripts/dist/main-min.js"></script>
 
         <?php if($page->get("name") == "work") :?>
-            <script src="/site/templates/scripts/dist/work.js"></script>
+            <script src="/site/templates/scripts/dist/work-min.js"></script>
         <?php endif; ?>
 
         <?php if($page->get("name") == "blog") :?>
-            <script src="/site/templates/scripts/dist/blog.js"></script>
+            <script src="/site/templates/scripts/dist/blog-min.js"></script>
         <?php endif; ?>
 
 
