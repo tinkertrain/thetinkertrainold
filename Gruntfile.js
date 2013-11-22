@@ -21,9 +21,11 @@ module.exports = function(grunt) {
       options: {
         browsers: ['last 2 versions']
       },
-      files: {
-        src: 'styles/main.css'
-      }
+      my_target: {
+        files: {
+          src: 'styles/main.css'
+        }
+      },
     },
 
     //Process Javascript
@@ -44,8 +46,8 @@ module.exports = function(grunt) {
             'images/**/*.jpg',
             'images/**/*.png',
             'scripts/dist/*.js',
-            '**/*.php',
-            '**/*.html',
+            '*.php',
+            '*.html',
           ],
         },
         options: {
@@ -63,7 +65,7 @@ module.exports = function(grunt) {
 
         autoprefixer: {
           files: ['styles/main.css'],
-          tasks: ['autoprefixer']
+          tasks: ['autoprefixer:my_target']
         },
 
         /* watch and see if our javascript files change */
