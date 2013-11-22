@@ -1,6 +1,8 @@
 (function() {
+
   'use strict';
-  //Load fonts
+
+  // Load fonts
   WebFont.load({
     google: {
       families: ['Andada', 'Andada:700']

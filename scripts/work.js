@@ -1,6 +1,9 @@
 (function() {
+
 	'use strict';
+
 	var TrainLine = function() {
+		var _this = this;
 		this.$section = $('section[role="main"]');
 		this.$projects = $('.projects');
 		this.projectNumber = $('.project').length;
@@ -21,13 +24,10 @@
 		};
 
 		this.moveTheLine = function () {
-			var _this = this;
-
 			_this.$buttons.on('click', function (e) {
 				e.preventDefault();
 				_this.animateLine($(this));
 			});
-
 		};
 
 		this.animateLine = function($buttonPressed) {
@@ -46,7 +46,6 @@
 		};
 
 		this.getProjectDetails = function () {
-			var _this = this;
 			_this.$project.on('click', 'div', function () {
 				var projectClass = $(this).attr('class');
 				var projectId = parseInt(projectClass.match(/(\d+)$/)[0], 10) - 1;
@@ -61,7 +60,6 @@
 		};
 
 		this.fetchProject = function (projectId) {
-			var _this = this;
 			$.ajax({
 				url: document.URL,
 				type: 'POST',
@@ -77,7 +75,6 @@
 
 				_this.$section.append(results);
 			});
-
 		};
 
 		this.closeDetails = function () {
@@ -91,7 +88,7 @@
 		// Initialize
 		this.initialize();
 
-	}; // TrainLine end
+	}; // TrainLine constructor end
 
 	var projects = new TrainLine();
 

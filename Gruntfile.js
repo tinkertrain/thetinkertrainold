@@ -1,5 +1,8 @@
 module.exports = function(grunt) {
+
   'use strict';
+
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -27,8 +30,9 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'scripts/main-min.js': ['bower_components/slabText/js/jquery.slabtext.js', 'scripts/main.js'],
-          'scripts/work-min.js': ['scripts/work.js'],
+          'scripts/dist/main-min.js': ['bower_components/slabText/js/jquery.slabtext.js', 'scripts/main.js'],
+          'scripts/dist/work-min.js': ['scripts/work.js'],
+          'scripts/dist/blog-min.js': ['scripts/blog.js'],
         }
       }
     },
@@ -39,7 +43,7 @@ module.exports = function(grunt) {
             'styles/*.css',
             'images/**/*.jpg',
             'images/**/*.png',
-            'scripts/*.js',
+            'scripts/dist/*.js',
             '**/*.php',
             '**/*.html',
           ],
@@ -65,19 +69,12 @@ module.exports = function(grunt) {
         /* watch and see if our javascript files change */
         js: {
           files: ['scripts/*.js'],
-          tasks: ['uglify']
+          tasks: ['newer:uglify:my_target']
         },
 
       }
 
     });
-
-  //Load plugins
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-browser-sync');
 
   //Task list
   grunt.registerTask('default', ['browser_sync', 'watch']);
