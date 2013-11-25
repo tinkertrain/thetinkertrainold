@@ -47,6 +47,9 @@
       &:hover, &:active {
         transform: translateY(-20px);
       }
+      img {
+        width: 140px;
+      }
     }
     &:after {
       content: '';
@@ -64,15 +67,15 @@
   background-color: #E7E6E6;
   border: 1px solid #CDCCCC;
   border-radius: 3px;
-  position: fixed;
-  top: 7%;
+  position: absolute;
+  top: -50%;
   left: 50%;
   margin-left: -180px;
   z-index: 302;
   width: 360px;
   padding: 2em 1.25em 0.5em;
   .csstransforms & {
-    top: 15%;
+    top: -50%;
   }
   @include breakpoint($pit-stop-1) {
     width: 496px;
@@ -83,6 +86,7 @@
   }
   p, ul {
     font-size: em(14);
+    margin-bottom: 1em;
   }
   ul {
     padding-left: 1em;
@@ -116,7 +120,10 @@
   }
   h3 {
     color: $blue-dark;
-    font-size: em(16);
+    font-size: em(18);
+    line-height: 1.2;
+    font-family: $andada;
+    font-weight: 700;
     @include breakpoint($pit-stop-1) {
       font-size: em(18);
     }
@@ -147,13 +154,13 @@
     }
   }
   h2 {
-      @include breakpoint($pit-stop-1) {
-        .csstransforms & {
-          width: 12%;
-          transform: rotate(-90deg) translatex(-120px) translateY(-10px);
-        }
+    @include breakpoint($pit-stop-1) {
+      .csstransforms & {
+        width: 12%;
+        transform: rotate(-90deg) translatex(-120px) translateY(-10px);
       }
     }
+  }
   & > div:first-of-type {
     @include breakpoint($pit-stop-1) {
        .csstransforms & {
@@ -176,7 +183,6 @@
     display: none;
   }
 }
-
 .involvement {
   .csstransforms & {
     @include breakpoint($pit-stop-1) {
@@ -189,7 +195,6 @@
     }
   }
 }
-
 .tech, .screenshots {
   .csstransforms & {
     @include breakpoint($pit-stop-1) {
