@@ -1,0 +1,218 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
+
+/*
+   NIGHT VERSION
+   ========================================================================== */
+
+.blog-night {
+  background: darken($brown-dark, 10%) !important;
+  h1, a, p, li, footer {
+    color: darken($bg, 20%) !important;
+  }
+  button {
+    box-shadow: inset 1px 1px 2px rgba($bg, 0.2), inset -1px -1px 2px darken($brown-dark, 15%) !important;
+    &:hover {
+      background-color: $brown-dark !important;
+    }
+    &:after {
+      background-color: $brown-light !important;
+      color: $brown-dark !important;
+      box-shadow: inset 1px 1px 2px rgba($brown-dark, 0.7) !important;
+    }
+    &:active {
+      background-color: darken($brown-light, 40%) !important;
+      box-shadow: inset 2px 2px 2px black;
+    }
+  }
+  .day {
+    background-color: darken($brown-light, 30%) !important;
+    border: 1px solid darken($brown-light, 50%) !important;
+    &:before {
+      content: "\e606" !important;
+      font-family: $thetinke;
+      color: $bg !important;
+      font-size: em(14) !important;
+      font-weight: normal;
+      line-height: 1.7 !important;
+    }
+  }
+  .serif {
+    color: $bg !important;
+    background-color: darken($brown-light, 30%) !important;
+    border-top: 1px solid darken($brown-light, 50%) !important;
+    border-bottom: 1px solid darken($brown-light, 50%) !important;
+    border-right: 1px solid darken($brown-light, 50%) !important;
+  }
+}
+
+
+/*
+   SANS SERIF VERSION
+   ========================================================================== */
+
+.blog-sans {
+  .serif {
+    font-family: 'Open Sans', sans-serif !important;
+  }
+  article {
+    * {
+      font-family: 'Open Sans', sans-serif !important;
+    }
+  }
+}
+
+/*
+   DAY/SERIF VERSION
+   ========================================================================== */
+
+
+.page-post {
+  section[role='main'] {
+    margin-bottom: 4em;
+  }
+
+  // Article
+
+  article, h1 {
+    font-family: $andada;
+  }
+
+  article {
+    margin-bottom: 2em;
+    header {
+      margin-bottom: 2em;
+      text-align: center;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: em(28);
+      line-height: 1.2;
+      margin-bottom: 1.5em;
+    }
+    p, ul {
+      margin-bottom: 2em;
+    }
+    ul {
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    footer {
+      text-align: center;
+      font-size: em(14);
+      border-top: 1px solid lighten($brown-dark, 50%);
+      padding-top: 1em;
+    }
+  }
+
+  .post-logo {
+    width: 50px;
+  }
+
+  // SWITCHER _______________________________
+  .switcher {
+    margin-bottom: 3em;
+    text-align: right;
+  }
+  button {
+    box-shadow: inset 1px 1px 2px rgba(white, 0.8), inset -1px -1px 2px rgba($brown-light, 0.5), 1px 1px 2px rgba($brown-dark, 0.3);
+    background-color: lighten($brown-light, 20%);
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 28px;
+    height: 27px;
+    transition: 0.2s;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    &:hover {
+      box-shadow: inset 1px 1px 2px rgba(white, 0.2), inset -1px -1px 2px rgba($brown-dark, 0.5);
+      background-color: darken($brown-light, 10%);
+    }
+    &:active {
+      color: $bg;
+      background-color: darken($brown-light, 30%);
+      box-shadow: inset 2px 2px 2px black;
+    }
+    &:after {
+      position: absolute;
+      display: none;
+      transition: 0.5s;
+      font-size: em(10);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+      background-color: $brown-dark;
+      color: $bg;
+      border-radius: 3px;
+      box-shadow: inset 1px 1px 2px rgba($brown-light, 0.2);
+      border: 1px solid $brown-dark;
+      padding: 3px 5px;
+      width: 100px;
+      height: 25px;
+      z-index: 10;
+      top: 0;
+      left: -135px;
+      text-align: center;
+    }
+    &:hover:after, &:hover:before {
+      display: block;
+    }
+  }
+  .day {
+    text-align: center;
+    border: 1px solid darken($brown-light, 10%);
+    border-radius: 3px 0 0 3px;
+    margin-right: -4px;
+    span {
+      @extend %ir;
+    }
+    &:hover {
+      &:before {
+        text-shadow: none;
+      }
+    }
+    &:after {
+      content: "Toggle Day/Night";
+      left: -118px;
+      width: 110px;
+    }
+    &:before {
+      content: "\e60a";
+      font-family: $thetinke;
+      font-size: em(16);
+      color: darken($brown-light, 25%);
+      width: 28px;
+      height: 27px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 1.5;
+    }
+    &:active {
+      &:before {
+        color: $bg;
+      }
+    }
+  }
+  .night {
+    background: transparent url("../images/moon.svg") 50% no-repeat;
+  }
+  .serif {
+    color: darken($brown-light, 25%);
+    border-top: 1px solid darken($brown-light, 10%);
+    border-bottom: 1px solid darken($brown-light, 10%);
+    border-right: 1px solid darken($brown-light, 10%);
+    border-radius: 0 3px 3px 0;
+    font-family: $andada, serif;
+    font-weight: bold;
+    &:after {
+      content: "Toggle Serif/Sans";
+    }
+  }
+  .sans {
+    font-family: 'Open sans', sans-serif;
+  }
+  // SWITCHER _______________________________
+}
