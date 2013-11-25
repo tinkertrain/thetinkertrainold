@@ -31,7 +31,7 @@
 		};
 
 		this.animateLine = function($buttonPressed) {
-			if( $buttonPressed.hasClass('next') ) {
+			if( $buttonPressed.hasClass('right') ) {
 				if ( this.projectNumber > this.counter ) {
 					this.$projects.animate({ left: '-=343'}, 500);
 					this.counter = this.counter + 1;
