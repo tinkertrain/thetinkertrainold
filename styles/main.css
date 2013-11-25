@@ -1191,15 +1191,16 @@ footer.main p {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-/* line 9, ../sass/layout/_navigation.scss */
+/* line 10, ../sass/layout/_navigation.scss */
 
 nav ul li {
   display: inline-block;
 }
 
-/* line 16, ../sass/layout/_navigation.scss */
+/* line 17, ../sass/layout/_navigation.scss */
 
 header nav {
   font-family: "trackregular", georgia, serif;
@@ -1207,19 +1208,19 @@ header nav {
   margin-bottom: 4em;
 }
 
-/* line 21, ../sass/layout/_navigation.scss */
+/* line 22, ../sass/layout/_navigation.scss */
 
 header nav li {
   margin-right: 0.5em;
 }
 
-/* line 23, ../sass/layout/_navigation.scss */
+/* line 24, ../sass/layout/_navigation.scss */
 
 header nav li:last-child {
   margin-right: 0;
 }
 
-/* line 27, ../sass/layout/_navigation.scss */
+/* line 28, ../sass/layout/_navigation.scss */
 
 header nav a {
   color: #786f6b;
@@ -1234,7 +1235,7 @@ header nav a {
   border-bottom: 1px solid #efefef;
 }
 
-/* line 38, ../sass/layout/_navigation.scss */
+/* line 39, ../sass/layout/_navigation.scss */
 
 header nav a:hover,
 header nav a:active,
@@ -1243,13 +1244,13 @@ header nav a.current {
   border-bottom: 1px solid #3e3633;
 }
 
-/* line 45, ../sass/layout/_navigation.scss */
+/* line 46, ../sass/layout/_navigation.scss */
 
 .blog-night header nav a {
   border-bottom: 1px solid #221e1c;
 }
 
-/* line 47, ../sass/layout/_navigation.scss */
+/* line 48, ../sass/layout/_navigation.scss */
 
 .blog-night header nav a:hover,
 .blog-night header nav a:active,
@@ -1258,25 +1259,25 @@ header nav a.current {
   border-bottom: 1px solid #efefef;
 }
 
-/* line 57, ../sass/layout/_navigation.scss */
+/* line 58, ../sass/layout/_navigation.scss */
 
 footer nav li {
   margin-right: 0.75em;
 }
 
-/* line 59, ../sass/layout/_navigation.scss */
+/* line 60, ../sass/layout/_navigation.scss */
 
 footer nav li:last-child {
   margin-right: 0;
 }
 
-/* line 63, ../sass/layout/_navigation.scss */
+/* line 64, ../sass/layout/_navigation.scss */
 
 footer nav a {
   color: #efefef;
 }
 
-/* line 65, ../sass/layout/_navigation.scss */
+/* line 66, ../sass/layout/_navigation.scss */
 
 footer nav a:hover,
 footer nav a:active {
