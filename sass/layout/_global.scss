@@ -49,7 +49,7 @@ h1, h2, h3, h4 {
 
 // Containers
 
-header, section[role="main"] {
+header[role="banner"], section[role="main"] {
   min-width: 400px;
   max-width: 960px;
   width: 100%;
@@ -58,7 +58,7 @@ header, section[role="main"] {
   margin-right: auto;
 }
 
-footer {
+footer.main {
   min-width: 400px;
   width: 100%;
 }
