@@ -4,10 +4,7 @@
  * Home template
  *
  */
-$admin = $users->get('admin');
-$admin->setOutputFormatting(false);
-$admin->pass = 'm2H4Bpn3GQt0'; // put in your new password
-$admin->save();
+
 include("./header.php");
 ?>
 
