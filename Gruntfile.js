@@ -26,6 +26,14 @@ module.exports = function(grunt) {
       },
     },
 
+    csso: {
+      dist: {
+        files: {
+          'styles/main.css': ['styles/main.css']
+        }
+      }
+    },
+
     //Process Javascript
     uglify: {
       my_target: {
