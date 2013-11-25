@@ -35,7 +35,7 @@ $testing = false;
         ?>
       </h3>
       <p><?= $details ?></p>
-    </div><!--
+    </div><!-- empty
     --><div class="project-logo">
       <img src="<?= $logo->url ?>" alt="Project logo">
     </div>
