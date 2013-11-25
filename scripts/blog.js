@@ -2,7 +2,7 @@
 	var Switcher = function(el){
 		var _this = this;
 		this.$el = $(el);
-		this.body = $('.page-blog');
+		this.body = $('.page-post');
 		this.$blogLogo = $('.blog-logo');
 
 		this.switchDayNight = function(){
