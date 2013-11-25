@@ -8,7 +8,7 @@ $template = $config->urls->templates;
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?php echo $page->get("headline|title"); ?></title>
         <meta name="description" content="<?php echo $page->summary; ?>" />
-         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Juan Pablo Lomeli Diaz">
         <meta name="keywords" content="web design, web development, web developer, web designer, illustration, portfolio, illustrator, freelance">
 
@@ -20,7 +20,8 @@ $template = $config->urls->templates;
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
     </head>
-    <body class="page-<?= $page->get("name") ?>">
+    <body class="<?php if ($page->template == 'post') echo "page-post"; else echo "page-" . $page->get('name'); ?>">
+
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -32,10 +33,10 @@ $template = $config->urls->templates;
                 <h2 class='getBig'><?= $page->title ?></h2>
             <?php endif; ?>
 
-            <?php if($page->get("name") == 'blog'): ?>
+            <?php if($page->get("name") == 'blog' || $page->template == 'post' ): ?>
                 <img class="blog-logo" src="/site/templates/images/mrtinker.svg" alt="The Tinkertrain pixelated illustration">
             <?php else: ?>
-                <h1><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
+                <h1 class="getBig"><span class="prefix">The</span><span class="slabtext">Tinkertrain</span></h1>
             <?php endif; ?>
 
             <?php if($page->get("name") == 'work'): ?>
