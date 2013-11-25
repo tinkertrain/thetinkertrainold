@@ -41,6 +41,15 @@ nav {
       }
     }
   }
+  .blog-night header & {
+    a {
+      border-bottom: 1px solid darken($brown-dark, 10%);
+      &:hover, &:active,  &.current {
+        color: $brown-dark;
+        border-bottom: 1px solid $bg;
+      }
+    }
+  }
 
   // Footer nav
   // ---------------------------------
