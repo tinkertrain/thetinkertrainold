@@ -9,10 +9,10 @@ include("./header.php");
 ?>
 
 	<section role="main">
-		<div class="switcher">
+		<menu class="switcher" type="toolbar">
 			<button class="day"><span>Toggle Day/Night</span></button>
 			<button class="serif">F</button>
-		</div>
+		</menu>
 
 		<article role="article" itemscope itemtype="http://schema.org/BlogPosting">
             <header>
