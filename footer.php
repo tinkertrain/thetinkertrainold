@@ -1,4 +1,4 @@
-        <footer>
+        <footer role="contentinfo" class="main">
             <div class="wrapped">
                 <?php include("./menu-contact.php"); ?>
                 <p role="contentinfo">
@@ -17,7 +17,7 @@
             <script src="/site/templates/scripts/dist/work-min.js"></script>
         <?php endif; ?>
 
-        <?php if($page->get("name") == "blog") :?>
+        <?php if($page->template == "post") :?>
             <script src="/site/templates/scripts/dist/blog-min.js"></script>
         <?php endif; ?>
 
