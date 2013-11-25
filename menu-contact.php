@@ -1,4 +1,4 @@
-<nav class="contact" role="navigation">
+<nav class="contact">
 	<ul>
 			<li><a class="icon-twitter" href="http://twitter.com/thetinkertrain" aria-label="Twitter"><span>Twitter</span></a></li><!--
 		 --><li><a class="icon-github" href="http://github.com/tinkertrain" aria-label="Github"><span>Github</span></a></li><!--
