@@ -7,13 +7,7 @@
 
 include("./header.php");
 ?>
-
 	<section role="main">
-		<div class="switcher">
-			<button class="day"><span>Toggle Day/Night</span></button>
-			<button class="serif">F</button>
-		</div>
-
 		<?php
 			$articles = $page->children("id>1, limit=3");
 			$pagination = $articles->renderPager(array(
@@ -25,15 +19,19 @@ include("./header.php");
         'listMarkup' => "<ul class='pagination'>{out}</ul>",
         'itemMarkup' => "<li class='{class}'>{out}</li>",
         'linkMarkup' => "<a href='{url}'><span>{out}</span></a>"
-    ));
-			foreach ($articles as $article)
-        {
-          echo "<article>";
-          echo "<h2><a href='$article->url'><img src='{$article->article_icon->url}'/>{$article->title}</a><p class='date'>{$article->article_date}</p></h2>";
-          echo "</article>";
-        }
-        echo $pagination;
-		 ?>
+    )); ?>
+
+    <?php foreach ($articles as $article): ?>
+        <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+            <h2>
+                <a href="<?= $article->url ?>">
+                    <img src="<?= $article->article_icon->url ?>"/>
+                    <?= $article->title ?>
+                </a>
+                <time itemprop="dateCreated" datetime="<?= date('Y-m-d', $article->getUnformatted("article_date")) ?>"><?= $article->article_date ?></time>
+        </article>
+        <?= $pagination ?>
+	<?php endforeach; ?>
 	</section>
 
 <?php include("./footer.php") ?>
