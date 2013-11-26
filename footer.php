@@ -11,7 +11,9 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 
-        <script src="/site/templates/scripts/dist/main-min.js"></script>
+        <?php if($page->get("name") == "home" || $page->get("name") == "about" || $page->get("name") == "blog" ) :?>
+            <script src="/site/templates/scripts/dist/main-min.js"></script>
+        <?php endif; ?>
 
         <?php if($page->get("name") == "work") :?>
             <script src="/site/templates/scripts/dist/work-min.js"></script>
