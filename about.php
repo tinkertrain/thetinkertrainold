@@ -11,7 +11,7 @@ include("./header.php");
   <?= $page->body; ?>
 
   <div class="cv">
-    <a href="#">
+    <a href="/site/templates/docs/cv.pdf" target="_blank">
       <img src="/site/templates/images/tinkertrain-folder.png" alt="Illustration of the Tinkertrain handing out documents">
       <p>Oh, and in case you are interested here&rsquo;s my CV</p>
     </a>
