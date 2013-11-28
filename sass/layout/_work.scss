@@ -66,14 +66,14 @@
   border: 1px solid #CDCCCC;
   border-radius: 3px;
   position: absolute;
-  top: -50%;
+  top: -65%;
   left: 50%;
   margin-left: -180px;
   z-index: 302;
   width: 360px;
   padding: 2em 1.25em 0.5em;
   .csstransforms & {
-    top: -50%;
+    top: -65%;
   }
   @include breakpoint($pit-stop-1) {
     width: 496px;

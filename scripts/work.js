@@ -10,6 +10,7 @@
 		this.$buttons = $('.train-line button');
 		this.$project = $('.project');
 		this.counter = 1;
+		this.$bodyHtml = $('html, body');
 
 		this.initialize = function () {
 			this.setProjectsWidth();
@@ -56,6 +57,7 @@
 					$('.' + projectClass ).fadeIn();
 					$('.overlay').fadeIn();
 				}
+				_this.$bodyHtml.animate({scrollTop: 0}, 400);
 			});
 		};
 
@@ -82,12 +84,14 @@
 				e.preventDefault();
 				$(this).parent().fadeOut();
 				$('.overlay').fadeOut();
+				_this.$bodyHtml.animate({scrollTop: _this.$projects.offset().top - 50 }, 400);
 			});
 		};
 
 		$('body').on('click', '.overlay', function() {
 			$('.project-detail').fadeOut();
 			$(this).fadeOut();
+			_this.$bodyHtml.animate({scrollTop: _this.$projects.offset().top - 50 }, 400);
 		});
 
 		// Initialize
