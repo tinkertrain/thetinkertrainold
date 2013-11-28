@@ -35,9 +35,9 @@
             ga('create','UA-39537262-1');ga('send','pageview');
         </script>
 
-        <!-- Browser sync, for dev only-->
+        <!-- Browser sync, for dev only
         <script src='http://192.168.34.124:3000/socket.io/socket.io.js'></script>
         <script src='http://192.168.34.124:3001/browser-sync-client.min.js'></script>
-
+        -->
     </body>
 </html>
