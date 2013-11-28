@@ -85,6 +85,11 @@
 			});
 		};
 
+		$('body').on('click', '.overlay', function() {
+			$('.project-detail').fadeOut();
+			$(this).fadeOut();
+		});
+
 		// Initialize
 		this.initialize();
 

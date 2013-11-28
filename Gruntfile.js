@@ -84,7 +84,7 @@ module.exports = function(grunt) {
 
         styles: {
           files: ['styles/main.css'],
-          tasks: ['newer:autoprefixer:my_target', 'csso:dist']
+          tasks: ['autoprefixer:my_target', 'csso:dist']
         },
 
         /* watch and see if our javascript files change */
