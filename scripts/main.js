@@ -22,7 +22,8 @@
   //Animate page h2s
   var $h2 = $('header h2');
   var $extraInfo = $('section.extra-info');
-  var $bubble = $('.bubble').hide();
+
+  $('.about-this-site').hide();
 
   $h2.addClass('animated');
 
